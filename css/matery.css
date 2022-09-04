@@ -241,7 +241,10 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /*background-image: linear-gradient(to right, #67FSD4 , #FFS554);*/
+    /*background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);*/
+    /*background-image: linear-gradient(rgba(47,65,84,0.2));*/
+    background-image: linear-gradient(to right, #8cbfb8 0%, #128c6f 100%);
 }
 
 .text-color {
@@ -550,10 +553,11 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*banner颜色动画*/
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {

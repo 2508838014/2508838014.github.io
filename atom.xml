@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>My Daily Diary</title>
+  
+  
+  <link href="https://2508838014.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://2508838014.github.io/"/>
+  <updated>2022-09-04T07:28:44.885Z</updated>
+  <id>https://2508838014.github.io/</id>
+  
+  <author>
+    <name>xudingxie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#基础学习-1</title>
+    <link href="https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/"/>
+    <id>https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/</id>
+    <published>2022-09-04T06:44:32.000Z</published>
+    <updated>2022-09-04T07:28:44.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前言：&lt;br&gt;自己真正的编写自己的学习博客&lt;/p&gt;
+&lt;h1 id=&quot;方法的类型&quot;&gt;&lt;a href=&quot;#方法的类型&quot; class=&quot;headerlink&quot; title=&quot;方法的类型&quot;&gt;&lt;/a&gt;方法的类型&lt;/h1&gt;&lt;h2 id=&quot;普通方法&quot;&gt;&lt;a href=&quot;#普通方法&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-C#" scheme="https://2508838014.github.io/categories/C/"/>
+    
+    
+    <category term="-C# -基础学习 -类" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>diyi</title>
+    <link href="https://2508838014.github.io/2022/08/21/diyi/"/>
+    <id>https://2508838014.github.io/2022/08/21/diyi/</id>
+    <published>2022-08-21T09:42:22.000Z</published>
+    <updated>2022-08-23T12:52:44.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;自己完成的第一篇博客的认证&lt;br&gt;下面来测试一下各种markdown的基本语法&lt;/p&gt;
+&lt;h1 id=&quot;第一部分-level-1&quot;&gt;&lt;a href=&quot;#第一部分-level-1&quot; class=&quot;headerlink&quot; title=&quot;第一部分 level</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

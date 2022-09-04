@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>C#基础学习-1</title>
+      <link href="/2022/09/04/c-ji-chu-xue-xi-1/"/>
+      <url>/2022/09/04/c-ji-chu-xue-xi-1/</url>
+      
+        <content type="html"><![CDATA[<p>前言：<br>自己真正的编写自己的学习博客</p><h1 id="方法的类型"><a href="#方法的类型" class="headerlink" title="方法的类型"></a>方法的类型</h1><h2 id="普通方法"><a href="#普通方法" class="headerlink" title="普通方法"></a>普通方法</h2><p>方法就是函数。普通方法就是函数。在类中就是对于方法的“行为”进行描述。<br></p><h3 id="普通方法的语法格式"><a href="#普通方法的语法格式" class="headerlink" title="普通方法的语法格式"></a>普通方法的语法格式</h3><p>访问修饰符 返回值 方法名（参数列表）<br><br>{<br>    方法的具体功能<br>}<br><code>class Person {     private string name;     private int age;     public string Name     {         get{return name};         set{name=value};     }     //后面都可以使用Name进行取值与赋值 } Person p1=new Person(); p1.Name="zhangsan"; name2=p1.Name;</code></p><h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>构造方法可以队实例化出来的对象进行初始化<br></p><h3 id="构造方法的语法格式"><a href="#构造方法的语法格式" class="headerlink" title="构造方法的语法格式"></a>构造方法的语法格式</h3><p>public 类名()<br><br>{<br>    构造函数代码<br>}  </p><ol><li>构造方法要用public修饰  </li><li>构造方法没有返回值，切连void也不能写  </li><li>构造方法的方法名必须与类名一样  </li><li>构造方法可以有重载  </li><li>构造方法如果没有编写过会自动增加一个空的构造方法，但是手动编写有参或者无参数的构造方法后就不会自动添加了<br><code>class Person {  //无参数的构造方法  public Person()  {  zhanwei  }  //两个参数的构造方法  public Person(string name,int age)  {  this.name=name;  this.age=atge;  } } //如何使用 Person p2=new Person(); Person p3=new Person("monkey",18);</code></li></ol><h3 id="This关键字"><a href="#This关键字" class="headerlink" title="This关键字"></a>This关键字</h3><p>this 表示类内部的那个变量</p><h2 id="析构方法"><a href="#析构方法" class="headerlink" title="析构方法"></a>析构方法</h2><p>析构方法是常常用于清理一个对象与构造方法差不多是相反的东西</p><h3 id="析构方法的语法"><a href="#析构方法的语法" class="headerlink" title="析构方法的语法"></a>析构方法的语法</h3><p>～类名()<br>{<br>    析构方法代码体;<br>}  </p><ol><li>析构方法没有任何参数</li><li>析构方法没有返回值与访问修饰符</li><li>析构方法由系统自动调用</li><li>析构方法可以不屑。<br><code>//以后补充</code></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> -C# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -C# -基础学习 -类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>diyi</title>
       <link href="/2022/08/21/diyi/"/>
       <url>/2022/08/21/diyi/</url>
