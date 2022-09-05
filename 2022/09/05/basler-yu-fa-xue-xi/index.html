@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C#基础学习-1, .net;daily diary;java;study;">
+    <meta name="keywords" content="Basler语法学习, .net;daily diary;java;study;">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C#基础学习-1 | My Daily Diary</title>
+    <title>Basler语法学习 | My Daily Diary</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -485,12 +485,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C#基础学习-1</h1>
+                    <h1 class="description center-align post-title">Basler语法学习</h1>
                 </div>
             </div>
         </div>
@@ -606,8 +606,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/">
-                                <span class="chip bg-color">-C# -基础学习 -类</span>
+                            <a href="/tags/basler-NET-c-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                                <span class="chip bg-color">-basler -.NET -c# -基础语法</span>
                             </a>
                         
                     </div>
@@ -618,8 +618,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                -C#
+                            <a href="/categories/Basler-Net/" class="post-category">
+                                -Basler -.Net
                             </a>
                         
                     </div>
@@ -631,7 +631,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-04
+                    2022-09-05
                 </div>
                 
 
@@ -655,59 +655,373 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>前言：<br>自己真正的编写自己的学习博客</p>
-<h1 id="方法的类型"><a href="#方法的类型" class="headerlink" title="方法的类型"></a>方法的类型</h1><h2 id="普通方法"><a href="#普通方法" class="headerlink" title="普通方法"></a>普通方法</h2><p>方法就是函数。普通方法就是函数。在类中就是对于方法的“行为”进行描述。<br></p>
-<h3 id="普通方法的语法格式"><a href="#普通方法的语法格式" class="headerlink" title="普通方法的语法格式"></a>普通方法的语法格式</h3><p>访问修饰符 返回值 方法名（参数列表）<br><br>{<br>    方法的具体功能<br>}  </p>
-<pre class="line-numbers language-none"><code class="language-none">class Person
-{
-	private string name;
-	private int age;
-	public string Name
-	{
-		get{return name};
-		set{name=value};
-	}
-	//后面都可以使用Name进行取值与赋值
-}
-Person p1=new Person();
-p1.Name="zhangsan";
-name2=p1.Name;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>构造方法可以队实例化出来的对象进行初始化<br></p>
-<h3 id="构造方法的语法格式"><a href="#构造方法的语法格式" class="headerlink" title="构造方法的语法格式"></a>构造方法的语法格式</h3><p>public 类名()<br><br>{<br>    构造函数代码<br>}  </p>
-<ol>
-<li>构造方法要用public修饰  </li>
-<li>构造方法没有返回值，切连void也不能写  </li>
-<li>构造方法的方法名必须与类名一样  </li>
-<li>构造方法可以有重载  </li>
-<li>构造方法如果没有编写过会自动增加一个空的构造方法，但是手动编写有参或者无参数的构造方法后就不会自动添加了<pre class="line-numbers language-none"><code class="language-none">class Person
-{
-	//无参数的构造方法
-	public Person()
-	{
-		zhanwei
-	}
-	//两个参数的构造方法
-	public Person(string name,int age)
-	{
-		this.name=name;
-		this.age=atge;
-	}
-}
-//如何使用
-Person p2=new Person();
-Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ol>
-<h3 id="This关键字"><a href="#This关键字" class="headerlink" title="This关键字"></a>This关键字</h3><p>this 表示类内部的那个变量</p>
-<h2 id="析构方法"><a href="#析构方法" class="headerlink" title="析构方法"></a>析构方法</h2><p>析构方法是常常用于清理一个对象与构造方法差不多是相反的东西</p>
-<h3 id="析构方法的语法"><a href="#析构方法的语法" class="headerlink" title="析构方法的语法"></a>析构方法的语法</h3><p>～类名()<br>{<br>    析构方法代码体;<br>}  </p>
-<ol>
-<li>析构方法没有任何参数</li>
-<li>析构方法没有返回值与访问修饰符</li>
-<li>析构方法由系统自动调用</li>
-<li>析构方法可以不屑。<pre class="line-numbers language-none"><code class="language-none">//构造语法
-//以后补充<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-</ol>
+                <p>Basler语法学习</p>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="基础设备"><a href="#基础设备" class="headerlink" title="基础设备"></a>基础设备</h2><h3 id="basler设备的查找"><a href="#basler设备的查找" class="headerlink" title="basler设备的查找"></a>basler设备的查找</h3><h3 id="第一个设备的操作"><a href="#第一个设备的操作" class="headerlink" title="第一个设备的操作"></a>第一个设备的操作</h3><pre class="line-numbers language-none"><code class="language-none"> //声明一个设备
+  PYLON_DEVICE_HANDLE hDev = new PYLON_DEVICE_HANDLE();          /* Handle for the pylon device. */
+  try
+            {
+                uint numDevices;    /* Number of devices available. */
 
+#if DEBUG
+                /* This is a special debug setting needed only for GigE cameras.
+                See 'Building Applications with pylon' in the programmer's guide. */
+                Environment.SetEnvironmentVariable("PYLON_GIGE_HEARTBEAT", "300000" /*ms*/);
+#endif
+                /* Before using any pylon methods, the pylon runtime must be initialized. */
+                //Pylon初始化
+                Pylon.Initialize();
+                /* Enumerate all camera devices. You must call
+                Pylon.EnumerateDevices() before creating a device. 
+                 枚举设备获得设备数量*/
+                numDevices = Pylon.EnumerateDevices();
+                if (0 == numDevices)
+                {
+                    throw new Exception("No devices found.");
+                }
+                /*hDev设为第一个设备的引用 Get a handle for the first device found.  */
+                hDev = Pylon.CreateDeviceByIndex(0);
+                /*在使用设备前打开此设备 
+                cPylonAccessModeControl==1 Write access to device features is allowed.
+                cPylonAccessModeStream = 2 Stream grabber access is allowed. 
+                ´Ë´¦Ê¹ÓÃÎ»»òÔËËã£¬¸ù¾ÝÔËËãµÄ½á¹ûµÃµ½ÏàÓ¦µÄÄ£Ê½¡£
+                PYLONC_ACCESS_MODE_CONTROL - Allows to read or write camera parameters to configure the camera. 
+                PYLONC_ACCESS_MODE_STREAM - Allows to read image data from the camera's stream grabber object. 
+                PYLONC_ACCESS_MODE_EVENT - Allows to read event data from the camera's stream grabber object. 
+                PYLONC_ACCESS_MODE_EXCLUSIVE - Allows exclusive access. When this flag is specified no other application may access the camera. 
+                PYLONC_ACCESS_MODE_MONITOR - Allows only read access. This flag cannot be combined with any other flags. 
+                It is typically used in Multicast/Broadcast applications with GigE cameras. You can pass one or more flags. 
+                If you pass more than one flag you can combine them using the 'or' operator. 
+                Before using the device, it must be opened. Open it for configuring
+                parameters and for grabbing images. */
+                Pylon.DeviceOpen(hDev, Pylon.cPylonAccessModeControl | Pylon.cPylonAccessModeStream);
+                /* Print out the name of the camera we are using. */
+                {
+                    bool isReadable;
+                    isReadable = Pylon.DeviceFeatureIsReadable(hDev, "DeviceModelName");
+                    if (isReadable)
+                    {
+                        string name = Pylon.DeviceFeatureToString(hDev, "DeviceModelName");
+                        Console.WriteLine("Using camera {0}", name);
+                    }
+                }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="多个设备的批量设置"><a href="#多个设备的批量设置" class="headerlink" title="多个设备的批量设置"></a>多个设备的批量设置</h3><pre class="line-numbers language-none"><code class="language-none">        const uint MAX_NUM_DEVICES = 2;
+        const uint NUM_BUFFERS = 1;        /* Number of buffers used for grabbing. */
+        const uint GIGE_PACKET_SIZE = 1500; /* Size of one Ethernet packet. */
+        const uint GIGE_PROTOCOL_OVERHEAD = 36;   /* Total number of bytes of protocol overhead. */
+        const uint AllGroupMask = 0xffffffff;
+       /// &lt;summary&gt;
+        /// The main entry point for the application.
+        /// &lt;/summary&gt;
+        static void Main()
+        {
+            /* Use a random number as the device key. */
+            uint DeviceKey = (uint)(new Random()).Next(int.MaxValue);
+            /* In this sample all cameras belong to the same group. */
+            const uint GroupKey = 0x24;
+            PYLON_DEVICE_HANDLE[] hDev = new PYLON_DEVICE_HANDLE[MAX_NUM_DEVICES];        /* Handles for the pylon devices. */
+            for (int deviceIndex = 0; deviceIndex &lt; MAX_NUM_DEVICES; ++deviceIndex)
+            {
+                hDev[deviceIndex] = new PYLON_DEVICE_HANDLE();
+            }
+            try
+            {
+                uint numDevicesEnumerated;    /* Number of the devices connected to this PC. */
+                uint numDevicesToUse;         /* Number of the devices to use in this sample. */
+                bool isAvail;                 /* Used for checking feature availability. */
+                bool isReady;                 /* Used as an output parameter. */
+                int i;                        /* Counter. */
+                uint deviceIndex;             /* Index of device used in the following variables. */
+                PYLON_WAITOBJECTS_HANDLE wos; /* Wait objects. */
+
+                /* These are camera specific variables: */
+                PYLON_STREAMGRABBER_HANDLE[] hGrabber = new PYLON_STREAMGRABBER_HANDLE[MAX_NUM_DEVICES]; /* Handle for the pylon stream grabber. */
+                PYLON_WAITOBJECT_HANDLE[]    hWait = new PYLON_WAITOBJECT_HANDLE[MAX_NUM_DEVICES];       /* Handle used for waiting for a grab to be finished. */
+                uint[]                       payloadSize = new uint[MAX_NUM_DEVICES];                    /* Size of an image frame in bytes. */
+                uint[]                       nStreams = new uint[MAX_NUM_DEVICES];                       /* The number of streams provided by the device. */
+                PYLON_STREAMBUFFER_HANDLE[]  hBuffer = new PYLON_STREAMBUFFER_HANDLE[MAX_NUM_DEVICES];
+                PylonBuffer&lt;Byte&gt;[]          buffer = new PylonBuffer&lt;Byte&gt;[MAX_NUM_DEVICES];
+#if DEBUG
+                /* This is a special debug setting needed only for GigE cameras.
+                See 'Building Applications with pylon' in the Programmer's Guide. */
+                Environment.SetEnvironmentVariable("PYLON_GIGE_HEARTBEAT", "300000" /*ms*/);
+#endif
+                /* Before using any pylon methods, the pylon runtime must be initialized. */
+                Pylon.Initialize();
+                /* Enumerate all camera devices. You must call
+                PylonEnumerateDevices() before creating a device. */
+                numDevicesEnumerated = Pylon.EnumerateDevices();
+                if (numDevicesEnumerated == 0)
+                {
+                    Pylon.Terminate();
+
+                    Console.Error.WriteLine("No devices found!");
+                    Console.Error.WriteLine("\nPress enter to exit.");
+                    Console.ReadLine();
+                    return;
+                }
+                /* Create wait objects. This must be done outside of the loop. */
+                wos = Pylon.WaitObjectsCreate();
+                /* Open cameras and set parameter */
+                deviceIndex = 0;
+                for (uint enumeratedDeviceIndex = 0; enumeratedDeviceIndex &lt; numDevicesEnumerated; ++enumeratedDeviceIndex)
+                {
+                    /* only open GigE devices */
+                    PYLON_DEVICE_INFO_HANDLE hDI = Pylon.GetDeviceInfoHandle(enumeratedDeviceIndex);
+                    if (Pylon.DeviceInfoGetPropertyValueByName(hDI, Pylon.cPylonDeviceInfoDeviceClassKey) != "BaslerGigE")
+                    {
+                        continue;
+                    }
+                    /* Get handles for the devices. */
+                    hDev[deviceIndex] = Pylon.CreateDeviceByIndex((uint)enumeratedDeviceIndex);
+                    /* Before using the device, it must be opened. Open it for configuring
+                    parameters and for grabbing images. */
+                    Pylon.DeviceOpen(hDev[deviceIndex], Pylon.cPylonAccessModeControl | Pylon.cPylonAccessModeStream);
+                    /* Print out the name of the camera we are using. */
+                    Console.WriteLine("Using camera '{0}'", Pylon.DeviceInfoGetPropertyValueByName(hDI, Pylon.cPylonDeviceInfoModelNameKey));
+                    isAvail = Pylon.DeviceFeatureIsReadable(hDev[deviceIndex], "ActionControl");
+                    if (!isAvail)
+                    {
+                        throw new Exception("Device doesn't support the Action Command");
+                    }
+                    /* Configure the first action */
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "ActionSelector", 1);
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "ActionDeviceKey", DeviceKey);
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "ActionGroupKey", GroupKey);
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "ActionGroupMask", AllGroupMask);
+                    /* Set the pixel format to Mono8, where gray values will be output as 8 bit values for each pixel. */
+                    /* ... Check first to see if the device supports the Mono8 format. */
+                    isAvail = Pylon.DeviceFeatureIsAvailable(hDev[deviceIndex], "EnumEntry_PixelFormat_Mono8");
+                    if (!isAvail)
+                    {
+                        /* Feature is not available. */
+                        throw new Exception("Device doesn't support the Mono8 pixel format.");
+                    }
+                    /* ... Set the pixel format to Mono8. */
+                    Pylon.DeviceFeatureFromString(hDev[deviceIndex], "PixelFormat", "Mono8");
+                    /* Disable acquisition start trigger if available */
+                    isAvail = Pylon.DeviceFeatureIsAvailable(hDev[deviceIndex], "EnumEntry_TriggerSelector_AcquisitionStart");
+                    if (isAvail)
+                    {
+                        Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerSelector", "AcquisitionStart");
+                        Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerMode", "Off");
+                    }
+                    /* Disable line1 trigger if available */
+                    isAvail = Pylon.DeviceFeatureIsAvailable(hDev[deviceIndex], "EnumEntry_TriggerSelector_Line1");
+                    if (isAvail)
+                    {
+                        Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerSelector", "Line1");
+                        Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerMode", "Off");
+                    }
+                    /* Enable frame start trigger with first action */
+                    Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerSelector", "FrameStart");
+                    Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerMode", "On");
+                    Pylon.DeviceFeatureFromString(hDev[deviceIndex], "TriggerSource", "Action1");
+                    /* For GigE cameras, we recommend increasing the packet size for better
+                        performance. When the network adapter supports jumbo frames, set the packet
+                        size to a value &gt; 1500, e.g., to 8192. In this sample, we only set the packet size
+                        to 1500.
+                        We also set the Inter-Packet and the Frame Transmission delay
+                        so the switch can line up packets better.
+                    */
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "GevSCPSPacketSize", GIGE_PACKET_SIZE);
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "GevSCPD", (GIGE_PACKET_SIZE + GIGE_PROTOCOL_OVERHEAD) * (MAX_NUM_DEVICES - 1));
+                    Pylon.DeviceSetIntegerFeature(hDev[deviceIndex], "GevSCFTD", (GIGE_PACKET_SIZE + GIGE_PROTOCOL_OVERHEAD) * deviceIndex);
+                    /* one device opened */
+                    ++deviceIndex;
+                }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="显示设备名称"><a href="#显示设备名称" class="headerlink" title="显示设备名称"></a>显示设备名称</h3><p> 显示设备的名称</p>
+<pre class="line-numbers language-none"><code class="language-none">/* Print out the name of the camera we are using. */
+               {
+                   bool isReadable;
+                   isReadable = Pylon.DeviceFeatureIsReadable(hDev, "DeviceModelName");
+                   if (isReadable)
+                   {
+                       string name = Pylon.DeviceFeatureToString(hDev, "DeviceModelName");
+                       Console.WriteLine("Using camera {0}", name);
+                   }
+               }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置拍摄图片模式"><a href="#设置拍摄图片模式" class="headerlink" title="设置拍摄图片模式"></a>设置拍摄图片模式</h3><pre class="line-numbers language-none"><code class="language-none">/* Set the pixel format to Mono8, where gray values will be output as 8 bit values for each pixel. */
+                /* ... Check first to see if the device supports the Mono8 format. */
+                isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_PixelFormat_Mono8");
+                if (!isAvail)
+                {
+                    /* Feature is not available. */
+                    throw new Exception("Device doesn't support the Mono8 pixel format.");
+                }
+                /* ... Set the pixel format to Mono8. */
+                Pylon.DeviceFeatureFromString(hDev, "PixelFormat", "Mono8");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置拍摄采集模式"><a href="#设置拍摄采集模式" class="headerlink" title="设置拍摄采集模式"></a>设置拍摄采集模式</h3><pre class="line-numbers language-none"><code class="language-none">/* Check the available camera trigger mode(s) to select the appropriate one: acquisition start trigger mode (used by previous cameras;
+                do not confuse with acquisition start command) or frame start trigger mode (equivalent to previous acquisition start trigger mode). */
+                isAvailAcquisitionStart = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_TriggerSelector_AcquisitionStart");
+                isAvailFrameStart = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_TriggerSelector_FrameStart");
+                /* Check to see if the camera implements the acquisition start trigger mode only.
+                优先是frame start （此时只有在半双工的时候才能打开frame burst帧突发），其次选择Acquisition Start。两种模式不能并存
+                */
+                if (isAvailAcquisitionStart &amp;&amp; !isAvailFrameStart)
+                {
+                    /* Camera uses the acquisition start trigger as the only trigger mode. */
+                    Pylon.DeviceFeatureFromString(hDev, "TriggerSelector", "AcquisitionStart");
+                    Pylon.DeviceFeatureFromString(hDev, "TriggerMode", "On");
+                    triggerSelectorValue = "AcquisitionStart";
+                }
+                else
+                {
+                    /* Camera may have the acquisition start trigger mode and the frame start trigger mode implemented.
+                    In this case, the acquisition trigger mode must be switched off. */
+                    if (isAvailAcquisitionStart)
+                    {
+                        Pylon.DeviceFeatureFromString(hDev, "TriggerSelector", "AcquisitionStart");
+                        Pylon.DeviceFeatureFromString(hDev, "TriggerMode", "Off");
+                    }
+                    /* Disable frame burst start trigger if available */
+                    isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_TriggerSelector_FrameBurstStart");
+                    if (isAvail)
+                    {
+                        Pylon.DeviceFeatureFromString(hDev, "TriggerSelector", "FrameBurstStart");
+                        Pylon.DeviceFeatureFromString(hDev, "TriggerMode", "Off");
+                    }
+
+                    /* To trigger each single frame by software or external hardware trigger: Enable the frame start trigger mode. */
+                    Pylon.DeviceFeatureFromString(hDev, "TriggerSelector", "FrameStart");
+                    Pylon.DeviceFeatureFromString(hDev, "TriggerMode", "On");
+                }
+                /* Note: the trigger selector must be set to the appropriate trigger mode
+                before setting the trigger source or issuing software triggers.
+                Frame start trigger mode for newer cameras, acquisition start trigger mode for previous cameras. 
+                软件触发*/
+                Pylon.DeviceFeatureFromString(hDev, "TriggerSelector", triggerSelectorValue);
+                /* Enable software triggering. 
+                持续采集*/
+                /* ... Select the software trigger as the trigger source. */
+                Pylon.DeviceFeatureFromString(hDev, "TriggerSource", "Software");
+                /* When using software triggering, the Continuous frame mode should be used. Once
+                   acquisition is started, the camera sends one image each time a software trigger is
+                   issued. */
+                Pylon.DeviceFeatureFromString(hDev, "AcquisitionMode", "Continuous");<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置拍摄数据包大小"><a href="#设置拍摄数据包大小" class="headerlink" title="设置拍摄数据包大小"></a>设置拍摄数据包大小</h3><pre class="line-numbers language-none"><code class="language-none">/* For GigE cameras, we recommend increasing the packet size for better
+   performance. If the network adapter supports jumbo frames, set the packet
+   size to a value &gt; 1500, e.g., to 8192. In this sample, we only set the packet size
+   to 1500. */
+/* ... Check first to see if the GigE camera packet size parameter is supported and if it is writable. */
+isAvail = Pylon.DeviceFeatureIsWritable(hDev, "GevSCPSPacketSize");
+if (isAvail)
+{
+    /* ... The device supports the packet size feature. Set a value. */
+    Pylon.DeviceSetIntegerFeature(hDev, "GevSCPSPacketSize", 1500);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置拍摄块"><a href="#设置拍摄块" class="headerlink" title="设置拍摄块"></a>设置拍摄块</h3><p>摄像机可以生成关于每个图像的特定信息，例如帧</p>
+<p>计数器、时间戳和CRC校验和，作为数据“块”附加到图像数据。此示例演示了如何启用块功能，以及如何获取</p>
+<p>以及如何处理附加数据。当相机处于块模式时，它传输数据块</p>
+<p>其被划分成块。第一块总是图像数据。当块特征被启用时，</p>
+<p>图像数据块之后是包含由块特征生成的信息的块。<br>本示例还演示了如何使用软件触发器。使用两个缓冲器。一旦缓冲器被填充，</p>
+<p>在处理接收到的缓冲器之前触发下一帧的获取。这种方法允许：</p>
+<p>在前一图像的处理进行的同时执行图像获取。</p>
+<pre class="line-numbers language-none"><code class="language-none">/* Before enabling individual chunks, the chunk mode in general must be activated. */
+isAvail = Pylon.DeviceFeatureIsWritable(hDev, "ChunkModeActive");
+if (!isAvail)
+{
+    throw new Exception("The device doesn't support the chunk mode.");
+}
+/* Activate the chunk mode. */
+Pylon.DeviceSetBooleanFeature(hDev, "ChunkModeActive", true);
+/* Enable some individual chunks... */
+/* ... The frame counter chunk feature. */
+/* Is the chunk feature available? */
+isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_ChunkSelector_Framecounter");
+if (isAvail)
+{
+    /* Select the frame counter chunk feature. */
+    Pylon.DeviceFeatureFromString(hDev, "ChunkSelector", "Framecounter");
+    /* Can the chunk feature be activated? */
+    isAvail = Pylon.DeviceFeatureIsWritable(hDev, "ChunkEnable");
+    if (isAvail)
+    {
+        /* Activate the chunk feature. */
+        Pylon.DeviceSetBooleanFeature(hDev, "ChunkEnable", true);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="设置块chunks的内容"><a href="#设置块chunks的内容" class="headerlink" title="设置块chunks的内容"></a>设置块chunks的内容</h4><pre class="line-numbers language-none"><code class="language-none">//设置循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，
+主要用来检测或校验数据传输或者保存后可能出现的错误。它是利用除法及余数的原理来作错误侦测的。
+                /* ... The CRC checksum chunk feature. */
+                /*  Note: Enabling the CRC checksum chunk feature is not a prerequisite for using
+                   chunks. Chunks can also be handled when the CRC checksum chunk feature is disabled. */
+                isAvail = Pylon.DeviceFeatureIsAvailable(hDev, "EnumEntry_ChunkSelector_PayloadCRC16");
+                if (isAvail)
+                {
+                    /* Select the CRC checksum chunk feature. */
+                    Pylon.DeviceFeatureFromString(hDev, "ChunkSelector", "PayloadCRC16");
+                    /* Can the chunk feature be activated? */
+                    isAvail = Pylon.DeviceFeatureIsWritable(hDev, "ChunkEnable");
+                    if (isAvail)
+                    {
+                        /* Activate the chunk feature. */
+                        Pylon.DeviceSetBooleanFeature(hDev, "ChunkEnable", true);
+                    }
+                }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="设置块解析器chunk-parser"><a href="#设置块解析器chunk-parser" class="headerlink" title="设置块解析器chunk parser"></a>设置块解析器chunk parser</h4><pre class="line-numbers language-none"><code class="language-none">/* The data block containing the image chunk and the other chunks has a self-descriptive layout.
+   A chunk parser is used to extract the appended chunk data from the grabbed image frame.
+   Create a chunk parser. */
+hChunkParser = Pylon.DeviceCreateChunkParser(hDev);
+if (!hChunkParser.IsValid)
+{
+    /* The transport layer doesn't provide a chunk parser. */
+    throw new Exception("No chunk parser available.");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="设置并分配拍摄流与缓冲区"><a href="#设置并分配拍摄流与缓冲区" class="headerlink" title="设置并分配拍摄流与缓冲区"></a>设置并分配拍摄流与缓冲区</h4><pre class="line-numbers language-none"><code class="language-none">/* Image grabbing is done using a stream grabber.
+                  A device may be able to provide different streams. A separate stream grabber must
+                  be used for each stream. In this sample, we create a stream grabber for the default
+                  stream, i.e., the first stream ( index == 0 ).
+                  */
+                /* Get the number of streams supported by the device and the transport layer. */
+                nStreams = Pylon.DeviceGetNumStreamGrabberChannels(hDev);
+                if (nStreams &lt; 1)
+                {
+                    throw new Exception("The transport layer doesn't support image streams.");
+                }
+                /* Create and open a stream grabber for the first channel. */
+                hGrabber = Pylon.DeviceGetStreamGrabber(hDev, 0);
+                Pylon.StreamGrabberOpen(hGrabber);
+                /* Get a handle for the stream grabber's wait object. The wait object
+                   allows waiting for buffers to be filled with grabbed data. */
+                hWait = Pylon.StreamGrabberGetWaitObject(hGrabber);
+                /* Determine the required size of the grab buffer. Since activating chunks will increase the
+                   payload size and thus the required buffer size, do this after enabling the chunks. */
+                payloadSize = checked((uint)Pylon.DeviceGetIntegerFeature(hDev, "PayloadSize"));
+                /* We must tell the stream grabber the number and size of the buffers
+                    we are using. */
+                /* .. We will not use more than NUM_BUFFERS for grabbing. */
+                Pylon.StreamGrabberSetMaxNumBuffer(hGrabber, NUM_BUFFERS);
+                /* .. We will not use buffers bigger than payloadSize bytes. */
+                Pylon.StreamGrabberSetMaxBufferSize(hGrabber, payloadSize);
+                /*  Allocate the resources required for grabbing. After this, critical parameters
+                    that impact the payload size must not be changed until FinishGrab() is called. */
+                Pylon.StreamGrabberPrepareGrab(hGrabber);
+                 /*
+                将缓冲区输入流抓取器的输入队列。对于每个缓冲区，API允许传递整数作为附加上下文信息。
+                抓取完成后，该整数将返回不变。在我们的示例中，我们使用缓冲区的索引作为上下文信息。
+                Before using the buffers for grabbing, they must be registered at
+                   the stream grabber. For each registered buffer, a buffer handle
+                   is returned. After registering, these handles are used instead of the
+                   buffer objects pointers. The buffer objects are held in a dictionary,
+                   that provides access to the buffer using a handle as key.
+                 */
+                buffers = new Dictionary&lt;PYLON_STREAMBUFFER_HANDLE, PylonBuffer&lt;Byte&gt;&gt;();
+                for (i = 0; i &lt; NUM_BUFFERS; ++i)
+                {
+                    PylonBuffer&lt;Byte&gt; buffer = new PylonBuffer&lt;byte&gt;(payloadSize, true);
+                    PYLON_STREAMBUFFER_HANDLE handle = Pylon.StreamGrabberRegisterBuffer(hGrabber, ref buffer);
+                    buffers.Add(handle, buffer);
+                }
+                /* Feed the buffers into the stream grabber's input queue. For each buffer, the API
+                   allows passing in an integer as additional context information. This integer
+                   will be returned unchanged when the grab is finished. In our example, we use the index of the
+                   buffer as context information. */
+                i = 0;
+                foreach (KeyValuePair&lt;PYLON_STREAMBUFFER_HANDLE, PylonBuffer&lt;Byte&gt;&gt; pair in buffers)
+                {
+                    Pylon.StreamGrabberQueueBuffer(hGrabber, pair.Key, i++);
+                }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -733,7 +1047,7 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/">https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/</a>
+                    <a href="https://2508838014.github.io/2022/09/05/basler-yu-fa-xue-xi/">https://2508838014.github.io/2022/09/05/basler-yu-fa-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -771,8 +1085,8 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/">
-                                    <span class="chip bg-color">-C# -基础学习 -类</span>
+                                <a href="/tags/basler-NET-c-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                                    <span class="chip bg-color">-basler -.NET -c# -基础语法</span>
                                 </a>
                             
                         </div>
@@ -942,9 +1256,10 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/09/05/basler-yu-fa-xue-xi/">
                     <div class="card-image">
@@ -962,9 +1277,9 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -977,6 +1292,7 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -995,13 +1311,13 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/21/diyi/">
+                <a href="/2022/09/04/c-ji-chu-xue-xi-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="diyi">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="C#基础学习-1">
                         
-                        <span class="card-title">diyi</span>
+                        <span class="card-title">C#基础学习-1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1012,15 +1328,27 @@ Person p3=new Person("monkey",18);<span aria-hidden="true" class="line-numbers-r
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            xudingxie
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    -C#
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/">
+                        <span class="chip bg-color">-C# -基础学习 -类</span>
+                    </a>
+                    
                 </div>
                 
             </div>

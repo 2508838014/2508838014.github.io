@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-09-04T07:28:44.885Z</updated>
+  <updated>2022-09-05T12:52:22.511Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Basler语法学习</title>
+    <link href="https://2508838014.github.io/2022/09/05/basler-yu-fa-xue-xi/"/>
+    <id>https://2508838014.github.io/2022/09/05/basler-yu-fa-xue-xi/</id>
+    <published>2022-09-05T12:43:21.000Z</published>
+    <updated>2022-09-05T12:52:22.511Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Basler语法学习&lt;/p&gt;
+&lt;h1 id=&quot;基本语法&quot;&gt;&lt;a href=&quot;#基本语法&quot; class=&quot;headerlink&quot; title=&quot;基本语法&quot;&gt;&lt;/a&gt;基本语法&lt;/h1&gt;&lt;h2 id=&quot;基础设备&quot;&gt;&lt;a href=&quot;#基础设备&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Basler -.Net" scheme="https://2508838014.github.io/categories/Basler-Net/"/>
+    
+    
+    <category term="-basler -.NET -c# -基础语法" scheme="https://2508838014.github.io/tags/basler-NET-c-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C#基础学习-1</title>
     <link href="https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/"/>
     <id>https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/</id>
     <published>2022-09-04T06:44:32.000Z</published>
-    <updated>2022-09-04T07:28:44.885Z</updated>
+    <updated>2022-09-04T13:37:54.225Z</updated>
     
     
       
