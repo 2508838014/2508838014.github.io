@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>C#继承学习-学习日志（2）</title>
+      <link href="/2022/09/05/c-ji-cheng-xue-xi-xue-xi-ri-zhi-2/"/>
+      <url>/2022/09/05/c-ji-cheng-xue-xi-xue-xi-ri-zhi-2/</url>
+      
+        <content type="html"><![CDATA[<p>学习继承<br>面向对象的三大特性，封装继承多态</p><h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="继承的好处"><a href="#继承的好处" class="headerlink" title="继承的好处"></a>继承的好处</h2><ol><li>优化代码结构</li><li>提高代码的复用性</li><li>为多态提供前提</li></ol><h2 id="继承语法格式"><a href="#继承语法格式" class="headerlink" title="继承语法格式"></a>继承语法格式</h2><p>子类继承父类，用用”：“冒号关键字符<br>class 子类：父类<br>{<br>    //类成员<br>}<br>This关键字表示当前类<br>Base是上传到父类来处理</p><pre class="line-numbers language-none"><code class="language-none">//父类class Hero{private string heroName;private inr attack;//父类的构造方法public Hero () {}public Hero (string m_heroName.int m_attack){this.heroName=m_heroName;this.attack=m_attack;}//父类的方法public string HeroName{get {return HeroName;}set {heroName=value;}}public int Attack{get {return Attack;}set {attack=value;}}}//子类class Luka:Hero{public Luka(){}public Luka(string m_heroName.int m_attack):base(string m_heroName.int m_attack){}public void Suishidaji(){Console.WriteLine("随时打击");}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="子类继承父类的关系"><a href="#子类继承父类的关系" class="headerlink" title="子类继承父类的关系"></a>子类继承父类的关系</h2><p>父类中的字段，用private修饰的字段，我们在子类中无法访问<br>public修饰，子类可以访问。通过<em>base.字段名</em>的方式访问<br>大部分（80%是private）<br>父类中的属性，用private修饰的属性，我们在子类中无法访问<br>public修饰，子类可以访问。通过<em>base.属性名</em>的方式访问<br>大部分（80%是public）<br>父类中的普通方法，用private修饰的普通方法，我们在子类中无法访问<br>public修饰，子类可以访问。通过<em>base.方法名</em>的方式访问  </p><p>父类中的构造方法，用private修饰的字段，我们在子类中无法访问<br>public修饰，子类可以访问。通过<em>base（）</em>的方式访问<br>大部分（99%是public）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -C# -日常学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -C# -基础学习 -类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Basler语法学习</title>
       <link href="/2022/09/05/basler-yu-fa-xue-xi/"/>
       <url>/2022/09/05/basler-yu-fa-xue-xi/</url>
@@ -38,7 +63,7 @@
       
       <categories>
           
-          <category> -C# </category>
+          <category> -C# -日常学习 </category>
           
       </categories>
       

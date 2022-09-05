@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-09-05T12:52:22.511Z</updated>
+  <updated>2022-09-05T14:07:02.189Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#继承学习-学习日志（2）</title>
+    <link href="https://2508838014.github.io/2022/09/05/c-ji-cheng-xue-xi-xue-xi-ri-zhi-2/"/>
+    <id>https://2508838014.github.io/2022/09/05/c-ji-cheng-xue-xi-xue-xi-ri-zhi-2/</id>
+    <published>2022-09-05T13:37:17.000Z</published>
+    <updated>2022-09-05T14:07:02.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;学习继承&lt;br&gt;面向对象的三大特性，封装继承多态&lt;/p&gt;
+&lt;h1 id=&quot;继承&quot;&gt;&lt;a href=&quot;#继承&quot; class=&quot;headerlink&quot; title=&quot;继承&quot;&gt;&lt;/a&gt;继承&lt;/h1&gt;&lt;h2 id=&quot;继承的好处&quot;&gt;&lt;a href=&quot;#继承的好处&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-C# -日常学习" scheme="https://2508838014.github.io/categories/C-%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="-C# -基础学习 -类" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Basler语法学习</title>
@@ -47,7 +73,7 @@
     <link href="https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/"/>
     <id>https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/</id>
     <published>2022-09-04T06:44:32.000Z</published>
-    <updated>2022-09-04T13:37:54.225Z</updated>
+    <updated>2022-09-05T13:38:08.465Z</updated>
     
     
       
@@ -61,7 +87,7 @@
     
     
     
-    <category term="-C#" scheme="https://2508838014.github.io/categories/C/"/>
+    <category term="-C# -日常学习" scheme="https://2508838014.github.io/categories/C-%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
     <category term="-C# -基础学习 -类" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/"/>
