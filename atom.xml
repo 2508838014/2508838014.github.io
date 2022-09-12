@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-09-05T14:07:02.189Z</updated>
+  <updated>2022-09-12T13:59:44.355Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#语法学习-学习日志（3）</title>
+    <link href="https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/"/>
+    <id>https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/</id>
+    <published>2022-09-12T07:32:25.000Z</published>
+    <updated>2022-09-12T13:59:44.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一些工作中遇见的不懂得语法进行学习&lt;br&gt;主要分为1.反射，2.特性，3.委托，4.？？与？。等，5.where&lt;br&gt;6.class类一些基础特点，7.as的作用。&lt;br&gt;8.一些杂谈</summary>
+        
+      
+    
+    
+    
+    <category term="-C# -日常学习" scheme="https://2508838014.github.io/categories/C-%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="-C# -基础学习 -类" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>C#继承学习-学习日志（2）</title>
@@ -73,7 +98,7 @@
     <link href="https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/"/>
     <id>https://2508838014.github.io/2022/09/04/c-ji-chu-xue-xi-1/</id>
     <published>2022-09-04T06:44:32.000Z</published>
-    <updated>2022-09-05T13:38:08.465Z</updated>
+    <updated>2022-09-12T13:59:50.987Z</updated>
     
     
       
