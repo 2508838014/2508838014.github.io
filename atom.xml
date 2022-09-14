@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-09-12T13:59:44.355Z</updated>
+  <updated>2022-09-14T14:23:21.602Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -17,18 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>耦合与内聚学习-学习日志（4）</title>
+    <link href="https://2508838014.github.io/2022/09/14/c-yu-fa-xue-xi-xue-xi-ri-zhi-4/"/>
+    <id>https://2508838014.github.io/2022/09/14/c-yu-fa-xue-xi-xue-xi-ri-zhi-4/</id>
+    <published>2022-09-14T13:02:46.000Z</published>
+    <updated>2022-09-14T14:23:21.602Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;软件要做到高内聚，低耦合。&lt;br&gt;内聚就是一个模块内部各成分之间相关联的成都的度量&lt;br&gt;耦合就是程序结构中哥哥模块的相互关联的度量  &lt;/p&gt;
+&lt;h2 id=&quot;内聚的分类：由高到低&quot;&gt;&lt;a href=&quot;#内聚的分类：由高到低&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="-基础学习 -软件工程 -内聚 -耦合" scheme="https://2508838014.github.io/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E5%86%85%E8%81%9A-%E8%80%A6%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C#语法学习-学习日志（3）</title>
     <link href="https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/"/>
     <id>https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/</id>
     <published>2022-09-12T07:32:25.000Z</published>
-    <updated>2022-09-12T13:59:44.355Z</updated>
+    <updated>2022-09-14T14:22:00.331Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;一些工作中遇见的不懂得语法进行学习&lt;br&gt;主要分为1.反射，2.特性，3.委托，4.？？与？。等，5.where&lt;br&gt;6.class类一些基础特点，7.as的作用。&lt;br&gt;8.一些杂谈</summary>
+    <summary type="html">&lt;p&gt;前言，此处代码使用VS2022，。net6的模式，全部都是在主函数的个实例，所以可以直接实例化一些类。&lt;br&gt;一些工作中遇见的不懂得语法进行学习&lt;br&gt;主要分为1.反射，2.特性，3.委托，4.？？与？。等，5.where&lt;br&gt;6.class类一些基础特点，7.as的作用</summary>
         
       
     
@@ -37,7 +63,7 @@
     <category term="-C# -日常学习" scheme="https://2508838014.github.io/categories/C-%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="-C# -基础学习 -类" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E7%B1%BB/"/>
+    <category term="-C# -基础学习 -委托" scheme="https://2508838014.github.io/tags/C-%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E5%A7%94%E6%89%98/"/>
     
   </entry>
   
