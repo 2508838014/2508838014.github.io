@@ -4,6 +4,494 @@
   
     
     <entry>
+      <title>Form操作-TextBox仅数字等输入，离开检测</title>
+      <link href="/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/"/>
+      <url>/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/</url>
+      
+        <content type="html"><![CDATA[<h1 id="仅支持数字等输入"><a href="#仅支持数字等输入" class="headerlink" title="仅支持数字等输入"></a>仅支持数字等输入</h1><p>有的时候我们对于一些控件，希望它仅仅支持部分文档的输入。比如端口号应该只有数字或者分隔符。因此在有了在界面中设置仅支持某种输入的方法。</p><pre class="line-numbers language-none"><code class="language-none">/// &lt;summary&gt;/// 设置Port只能输入数字与回车/// &lt;/summary&gt;/// &lt;param name="sender"&gt;&lt;/param&gt;/// &lt;param name="e"&gt;&lt;/param&gt;private void PortTextBox_KeyPress(object sender, KeyPressEventArgs e){    if (!((e.KeyChar &gt;= 48 &amp;&amp; e.KeyChar &lt;= 57) || e.KeyChar == 8))    {        e.Handled = true;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="离开或者输入时的检测"><a href="#离开或者输入时的检测" class="headerlink" title="离开或者输入时的检测"></a>离开或者输入时的检测</h1><p>想了下好像没有必要<br>那就提一嘴，主要就是在控件的事件，在可视化界面中，放在属性旁边的选项，能够帮助实现部分的功能。<br>比如离开，进入，按键等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作小技巧 </category>
+          
+          <category> TextBox </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> 日常学习 </tag>
+            
+            <tag> TextBox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XML-RPC</title>
+      <link href="/2022/10/09/xml-rpc/"/>
+      <url>/2022/10/09/xml-rpc/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/qq_39024280/article/details/120861419?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-120861419-blog-95950589.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-120861419-blog-95950589.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个博客内容可以直接使用<br>一些使用心得<br>尝试了一下封装在系统类中，完全可以  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+          <category> XML-RPC </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> XML-RPC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-MessageBox</title>
+      <link href="/2022/10/09/form-cao-zuo-messagebox/"/>
+      <url>/2022/10/09/form-cao-zuo-messagebox/</url>
+      
+        <content type="html"><![CDATA[<p>参考文章<br><a href="https://blog.csdn.net/qq_44793656/article/details/124509495">https://blog.csdn.net/qq_44793656/article/details/124509495</a></p><pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/qq_44793656/article/details/124509495<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> MessageBox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-二次确认弹窗</title>
+      <link href="/2022/10/09/form-cao-zuo-er-ci-que-ren-dan-chuang/"/>
+      <url>/2022/10/09/form-cao-zuo-er-ci-que-ren-dan-chuang/</url>
+      
+        <content type="html"><![CDATA[<p>在一些比较关键的功能上可以让进行二次确认，避免因为误操作而导致的损失。<br>示例代码是用于二次确认用户的界面关闭，可以在此基础上进行修改。 </p><pre class="line-numbers language-none"><code class="language-none">private void frmMain_FormClosing(object sender, FormClosingEventArgs e){    DialogResult Result = MessageBox.Show("程序将被关闭，请确认是否继续","警告", MessageBoxButtons.OKCancel);    if (Result == DialogResult.Cancel)    {        e.Cancel = true;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> 二次确认 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IP设置</title>
+      <link href="/2022/10/09/ip-she-zhi/"/>
+      <url>/2022/10/09/ip-she-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="IP校验"><a href="#IP校验" class="headerlink" title="IP校验"></a>IP校验</h1><p>检查输入是否符合IP格式，建议与IP是否未空混合使用</p><pre class="line-numbers language-none"><code class="language-none">public static bool IPCheck(string IP){    return Regex.IsMatch(IP, @"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$");}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="获取设备当前IP"><a href="#获取设备当前IP" class="headerlink" title="获取设备当前IP"></a>获取设备当前IP</h1><p>获取当前设备的ip</p><pre class="line-numbers language-none"><code class="language-none">public string GetAddressIP(){    string AddressIP = string.Empty;    foreach (IPAddress _IPAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)    {        if (_IPAddress.AddressFamily.ToString() == "InterNetwork")        {            AddressIP = _IPAddress.ToString();        }    }    return AddressIP;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> IP设置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-菜单栏与下拉框</title>
+      <link href="/2022/10/09/form-cao-zuo-cai-dan-lan-yu-xia-la-kuang/"/>
+      <url>/2022/10/09/form-cao-zuo-cai-dan-lan-yu-xia-la-kuang/</url>
+      
+        <content type="html"><![CDATA[<p>窗口上端的菜单栏<br>MenuItemInstallService<br>记得添加一个menuScrip属性的控件<br>设置之后依次添加，见天click事件也是可以的。<br>下拉框<br>combox<br>Combox.selectIndex表示当前所选择的值的编号<br>combox.index表示编号从0开始计数，0，1，2，3，4…  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> 菜单栏 </tag>
+            
+            <tag> 下拉框 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-TextBox显示服务状态</title>
+      <link href="/2022/10/09/form-cao-zuo-textbox-xian-shi-fu-wu-zhuang-tai/"/>
+      <url>/2022/10/09/form-cao-zuo-textbox-xian-shi-fu-wu-zhuang-tai/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TextBox显示状态（status）"><a href="#TextBox显示状态（status）" class="headerlink" title="TextBox显示状态（status）"></a>TextBox显示状态（status）</h1><p>在界面张添加timer控件，<br>设置enable=true这个属性是是否启用，<br>interval=1000此处单位为毫秒，这个属性是时间间隔<br>然后在事件中选择tick，绑定需要执行的方法。<br>状态文本可以显示在TextBox。Text中，可以将TextBox.Enable=false这样界面中文本框就不能显示了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作技巧 </category>
+          
+          <category> TextBox </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> 日常学习 </tag>
+            
+            <tag> TextBox </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>管理员权限运行程序</title>
+      <link href="/2022/10/09/guan-li-yuan-quan-xian-yun-xing-cheng-xu/"/>
+      <url>/2022/10/09/guan-li-yuan-quan-xian-yun-xing-cheng-xu/</url>
+      
+        <content type="html"><![CDATA[<p>在工作中由于使用的系统进程，这个需要管理员权限才可以实现对于进程的访问。因此打包出来的程序也是需要系统权限的验证。  </p><h1 id="两种方案"><a href="#两种方案" class="headerlink" title="两种方案"></a>两种方案</h1><h2 id="方案1-通过应用程序服务清单进行权限设置"><a href="#方案1-通过应用程序服务清单进行权限设置" class="headerlink" title="方案1-通过应用程序服务清单进行权限设置"></a>方案1-通过应用程序服务清单进行权限设置</h2><p>这个设置会在exe上有管理员标志。运行程序时会索取管理员权限。需要注意的的是添加应用程序服务清单是在你的启动program，如果在别的program中添加不起作用。  </p><pre class="line-numbers language-none"><code class="language-none">&lt;!-- UAC 清单选项     如果想要更改 Windows 用户帐户控制级别，请使用     以下节点之一替换 requestedExecutionLevel 节点。n&lt;requestedExecutionLevel  level="asInvoker" uiAccess="false" /&gt;&lt;requestedExecutionLevel  level="requireAdministrator" uiAccess="false" /&gt;&lt;requestedExecutionLevel  level="highestAvailable" uiAccess="false" /&gt;    指定 requestedExecutionLevel 元素将禁用文件和注册表虚拟化。    如果你的应用程序需要此虚拟化来实现向后兼容性，则删除此    元素。--&gt;&lt;requestedExecutionLevel level="requireAdministrator" uiAccess="false" /&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="方案2-手动索取管理员权限"><a href="#方案2-手动索取管理员权限" class="headerlink" title="方案2-手动索取管理员权限"></a>方案2-手动索取管理员权限</h2><p>此方案是在程序启动时检查是否管理员权限启动，如果不是就提示用户需要管理员权限启动，然后关闭程序。如果时管理员权限启动，则正常启动程序。<br>这里提供了一种如何在程序即将运行时，申请管理员权限的方案。  </p><pre class="line-numbers language-none"><code class="language-none">using System;using System.Collections.Generic;using System.Diagnostics;using System.Linq;using System.Reflection;using System.Security.Principal;using System.ServiceProcess;using System.Text;using System.Threading.Tasks;using System.Windows.Forms;namespace XmlRpcApp{    static class Program    {        [STAThread]        static void Main()        {            var wi = WindowsIdentity.GetCurrent();            var wp = new WindowsPrincipal(wi);            bool runAsAdmin = wp.IsInRole(WindowsBuiltInRole.Administrator);            if (!runAsAdmin)            {                // It is not possible to launch a ClickOnce app as administrator directly,                // so instead we launch the app as administrator in a new process.                var processInfo = new ProcessStartInfo(Assembly.GetExecutingAssembly().CodeBase);                // The following properties run the new process as administrator                processInfo.UseShellExecute = true;                processInfo.Verb = "runas";                // Start the new process                try                {                    Process.Start(processInfo);                }                catch (Exception)                {                    // The user did not allow the application to run as administrator                    MessageBox.Show("This program requires administrator privileges to run");                }                // Shut down the current process                Application.Exit();            }            else            {                // We are running as administrator                Application.EnableVisualStyles();                Application.SetCompatibleTextRenderingDefault(false);                Application.Run(new ClientApp());            }        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>参考文章链接如下所示</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> 管理员权限 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> 管理员权限程序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>修改命名空间</title>
+      <link href="/2022/10/09/xiu-gai-ming-ming-kong-jian/"/>
+      <url>/2022/10/09/xiu-gai-ming-ming-kong-jian/</url>
+      
+        <content type="html"><![CDATA[<p>参考链接<br><a href="https://www.jb51.net/article/252677.htm">https://www.jb51.net/article/252677.htm</a></p><pre class="line-numbers language-none"><code class="language-none">https://www.jb51.net/article/252677.htm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 修改命名空间 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>批处理.bat返回上一层目录</title>
+      <link href="/2022/10/09/pi-chu-li-bat-fan-hui-shang-yi-ceng-mu-lu/"/>
+      <url>/2022/10/09/pi-chu-li-bat-fan-hui-shang-yi-ceng-mu-lu/</url>
+      
+        <content type="html"><![CDATA[<p>批处理目前看到的应用只有win的。bat文件中<br>这次遇见的问题是我文件自动导出到下一层，但是我需要使用上一层的某个exe，这个就是需要对于批处理文件的路径有一定的认识<br>我需要C：\ batch \路径。我如何才能获得这条道路？ 它工作正常如果我给绝对路径 -  </p><pre class="line-numbers language-none"><code class="language-none">%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe C:\batch\bin\ERecruitGenerateReportsWindowsService.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>您尝试使用%<del>1在目录结构中上升一级是创造性的并且语法完全无效。正确的语法同样简单 - 使用..\。 由于%</del>dp0以\结尾，因此不需要前导\。</p><pre class="line-numbers language-none"><code class="language-none">%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe %~dp0..\bin\ERecruitGenerateReportsWindowsService.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+          <category> 工作技巧 </category>
+          
+          <category> 批处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> 批处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AutoResetEvent与Waitone与set</title>
+      <link href="/2022/10/09/autoresetevent-yu-waitone-yu-set/"/>
+      <url>/2022/10/09/autoresetevent-yu-waitone-yu-set/</url>
+      
+        <content type="html"><![CDATA[<p>AutoResetEvent a1 = new AutoResetEvent(false);<br>不传入false默认为true，不会阻塞线程，所以必须传false。<br>WaitOne(int)； WaitOne(int,bool)； WaitOne(timespan,bool)；<br>第二个参数传true代表超时后由set()设置不阻塞线程，如果传入false，如:WaitOne(2000,false);当超过两秒后线程就解除阻塞了，也就是等第二次在进入此线程时候会直接执行并不会阻塞线程。<br>WaitOne返回值为true代表当前线程不阻塞，返回为false代表当前线程被阻塞。<br>WaitOne第二个参数：如果等待之前先退出上下文的同步域（如果在同步上下文中），并在稍后重新获取它(需要其他地方调用Set方法)，则为 true；否则为 false。<br>原文链接：<a href="https://blog.csdn.net/Liumotor/article/details/107085239">https://blog.csdn.net/Liumotor/article/details/107085239</a>  </p><pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/Liumotor/article/details/107085239<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>仔细想了下为什么会用到这个知识。应该是面对不能够确定处理时间，但是事件的触发又是不受到控制的。在用户去手动处理一些内容的时候，避免用户再次接到新的弹窗，影响用户的操作。因此需要阻塞当前线程，然后去处理之前线程提出的问题，等到问题处理完毕之后，恢复线程的运行。很巧妙的设定。  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+          <category> AutoResetEvent </category>
+          
+          <category> waitone </category>
+          
+          <category> set </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> AutoResetEvent </tag>
+            
+            <tag> waitone </tag>
+            
+            <tag> set </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何获取列的构造方法以及对应的参数列表</title>
+      <link href="/2022/10/09/ru-he-huo-qu-lie-de-gou-zao-fang-fa-yi-ji-dui-ying-de-can-shu-lie-biao/"/>
+      <url>/2022/10/09/ru-he-huo-qu-lie-de-gou-zao-fang-fa-yi-ji-dui-ying-de-can-shu-lie-biao/</url>
+      
+        <content type="html"><![CDATA[<p>顾名思义，仅仅知道类的名字的时候去构造函数会很困难，通过这种方法可以获取对应的构造函数。</p><pre class="line-numbers language-none"><code class="language-none">Type type = typeof(MethodTest);// 输入参数：BindingFlags.Public，获取所有公开的构造函数Console.WriteLine("输入参数：BindingFlags.Public | BindingFlags.NonPublic，获取所有公开yu的构造函数：");ConstructorInfo[] infoArray2 = type.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);foreach (ConstructorInfo info in infoArray2){    Console.WriteLine("这是一个公开的构造方法{0}", info.IsPublic);    Console.WriteLine("这是一个静态的构造方法{0}", info.IsStatic);    foreach(ParameterInfo a in info.GetParameters())    {        Console.WriteLine(a.ParameterType.ToString());    }    }Console.WriteLine();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>上面是对应的关键代码，下面是完整代码，演示如何去实现。</p><pre class="line-numbers language-none"><code class="language-none">using System;using System.Collections.Generic;using System.Linq;using System.Text;using System.Reflection;using System.Runtime.InteropServices;using System.Threading.Tasks;using UnderAutomation.UniversalRobots.XmlRpc;namespace ReflectMethod{    class Program    {        static void Main(string[] args)        {            Type type = typeof(MethodTest);            // 输入参数：BindingFlags.Public，获取所有公开的构造函数            Console.WriteLine("输入参数：BindingFlags.Public | BindingFlags.NonPublic，获取所有公开yu的构造函数：");            ConstructorInfo[] infoArray2 = type.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);            foreach (ConstructorInfo info in infoArray2)            {                Console.WriteLine("这是一个公开的构造方法{0}", info.IsPublic);                Console.WriteLine("这是一个静态的构造方法{0}", info.IsStatic);                foreach(ParameterInfo a in info.GetParameters())                {                    Console.WriteLine(a.ParameterType.ToString());                }                            }            Console.WriteLine();            //// 输入参数：BindingFlags.Public，获取所有公开的构造函数            //Console.WriteLine("输入参数：BindingFlags.Public | BindingFlags.Instance，获取所有公开的构造函数：");            //ConstructorInfo[] infoArray3 = type.GetConstructors(BindingFlags.Public | BindingFlags.Instance);            //foreach (ConstructorInfo info in infoArray3)            //{            //    Console.Write(info.IsStatic);            //    Console.Write(info.GetParameters().ToString());            //}            //Console.WriteLine();            //Console.WriteLine("输入参数：BindingFlags.Static | BindingFlags.NonPublic，获取所有静态的构造函数：");            //ConstructorInfo[] infoArray4 = type.GetConstructors(BindingFlags.Static | BindingFlags.NonPublic);            //foreach (ConstructorInfo info in infoArray4)            //{            //    Console.Write(info.IsStatic);            //    Console.Write(info.GetParameters().ToString());            //}            //Console.WriteLine();            //Console.WriteLine("输入参数：BindingFlags.NonPublic | BindingFlags.Instance，获取所有非公开的构造函数：");            //ConstructorInfo[] infoArray5 = type.GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance);            //foreach (ConstructorInfo info in infoArray5)            //{            //    Console.Write(info.IsStatic);            //    Console.Write(info.GetParameters().ToString());            //}            Console.ReadKey();                    ////反射获取 命名空间+类名            //string className = "ReflectMethod.MethodTest";            //string methodName = "Sleep";            //int a;            //a = 10;            ////Type[] types = { typeof(string), typeof(string) };            //Type[] types = new Type[a];            ////传递参数            //Object[] paras = new Object[] { "name","18" };            //Type t = Type.GetType(className);            //object obj = Activator.CreateInstance(t);            ////直接调用            //MethodInfo method = t.GetMethod(methodName,types);            //method.Invoke(obj, paras);        }    }    class MethodTest    {        string name;        public MethodTest(string name)        {            this.name = name;        }        int age;        public MethodTest(int age)        {            this.age = age;        }        public void Sleep(string name,int age)        {            Console.WriteLine($"You have bean man,you must sleep alone,{name}");        }        public void Sleep(string name, string age)        {            Console.WriteLine($"You have bean {age} old,you must sleep alone,{name}");        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>一些参数的说明<br>暂时掠过<br>通过方法名与参数获取对应的方法，不调用  </p><pre class="line-numbers language-none"><code class="language-none">//传递参数string className = "ConsoleApp2.ClassSample";string methodName = request.MethodName;var t = Type.GetType(className);object obj = Activator.CreateInstance(t);try{    #region 查找对应方法    MethodInfo[] info = t.GetMethods();    for (int i = 0; i &lt; info.Length; i++)    {        var md = info[i];        //方法名        string mothodName = md.Name;        //参数集合        ParameterInfo[] paramInfos = md.GetParameters();        //方法名相同且参数个数一样        if (mothodName == methodName &amp;&amp; paramInfos.Length == paras.Length)        {            md.Invoke(obj, paras);        }    }    #endregion}catch (Exception ex){    throw ex;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C# </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> 类的构造函数与参数列表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Win服务的创建与卸载</title>
+      <link href="/2022/10/09/win-fu-wu-de-chuang-jian-yu-xie-zai/"/>
+      <url>/2022/10/09/win-fu-wu-de-chuang-jian-yu-xie-zai/</url>
+      
+        <content type="html"><![CDATA[<p>win服务的创建，参考链接  </p><pre class="line-numbers language-none"><code class="language-none">https://www.cnblogs.com/xiketang/p/16518053.html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><a href="https://www.cnblogs.com/xiketang/p/16518053.html">https://www.cnblogs.com/xiketang/p/16518053.html</a><br>可以参考这个链接中的环境配置  </p><pre class="line-numbers language-none"><code class="language-none">https://blog.csdn.net/weixin_43783990/article/details/123001345<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><a href="https://blog.csdn.net/weixin_43783990/article/details/123001345">https://blog.csdn.net/weixin_43783990/article/details/123001345</a><br>win服务的删除，参考方法<br>第一种：通过Dos命令来 删除/卸载服务  </p><ol><li>开始 - 运行 -“cmd”。  </li><li>进入Dos命令行，输入命令：<br>sc delete VMUSBArbService<br>注意：VMUSBArbService是服务名称。<br>当然：也可以通过：sc –help 查看sc命令参数等信息等。<br>第二种方法：直接修改注册表 删除/卸载服务  </li><li>开始 - 运行 - “regedit”。  </li><li>在“HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServices”中删除相应的 键值   即可！<br>额外的小tips<br>win+r cmd  services.msc<br>查看目前正在运行的服务<br>安装的目录文件路径<br>C:\Windows\Microsoft.NET\Framework\v4.0.30319</li></ol><p>在新建项目中选择，Windows服务<br>在service.cs中添加两个服务，一个serviceProcessInstaller<br>一个是serviceInstall,<br>然后设置他们对应的属性。<br>servicePrcessInstaller主要是设置Account，设置成为LocalSystem<br>这个比较重要<br>serviceInstall设置ServiceName，这个是服务名称<br>DisplayName，这个是展示的名称<br>StartType这个是触发方式<br>1.Description：表示服务说明（描述服务是干什么的）；<br>2.DisplayName：表示友好名称，可以理解为服务名的别名；<br>3.ServiceName：表示服务名，此为真正的服务名，与DisplayName是有区别的哦，是系统识别的依据；<br>这三个属性在WIN7及更高版本操作系统中，同属性但表示却不同：<br>本地服务列表中：（即：services.msc）<br>名称列显示的是DisplayName，<br>描述列显示的是Description。  </p><p>在WINDOWS任务管理器中的服务选项卡列表中：<br>名称列显示的是ServiceName，<br>描述列显示的是DisplayName。<br>本人之前就是被这三个属性给搞混了，出现安装成功，在任务管理器的服务列表中可以看到，但在服务列表中怎么也找不到，其实是将ServiceName与DisplayName搞错了。  </p><p>在生成的Onstart与Onclose中填入你想要开始与结束的时候触发的方法。<br>tips：服务需要结合管理员权限一节，这样运行不会出现因为管理员权限方面的问题。<br>还有如果是在path地方出现问题，考虑是因为自己的运行的城西x64或者x86的环境的问题。  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> Win服务 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作技巧 </tag>
+            
+            <tag> Win服务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>根据方法名与参数列表调用对应方法</title>
+      <link href="/2022/10/09/gen-ju-fang-fa-ming-yu-can-shu-lie-biao-diao-yong-dui-ying-fang-fa/"/>
+      <url>/2022/10/09/gen-ju-fang-fa-ming-yu-can-shu-lie-biao-diao-yong-dui-ying-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<p>顾名思义，有的时候会使用RPC技术来实现一些方法的远程调用。有时候因为是使用其他人编写好的方法，让自己不能像xmlrpc.net描述的那种进行直接调用，但是可以获得需要调用的方法名称与参数列表，以及对应的值。面对这样的情况，就有了以下的代码。<br>这里是主要的实现方法<br>值得注意的点有  </p><ol><li>getmethod后面如果不设置types那样如果面对有重载的函数就会直接报错</li><li>activator。createInstanc（），第一个参数是类的名称，后面的参数是实例化类所需要的参数。<pre class="line-numbers language-none"><code class="language-none">//反射获取 命名空间+类名string className = "ReflectMethod.MethodTest";string methodName = "Sleep";Type[] types = { typeof(string), typeof(string) };//Type[] types = new Type[a];//传递参数Object[] paras = new Object[] { "name", "18" };Type t = Type.GetType(className);object obj = Activator.CreateInstance(t,1);//直接调用MethodInfo method = t.GetMethod(methodName, types);method.Invoke(obj, paras);Console.ReadKey();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>下面是用于验证的方法。<br>验证上面的方案是否成功。<pre class="line-numbers language-none"><code class="language-none">class MethodTest{    string name;    public MethodTest(string name)    {        this.name = name;    }    int age;    public MethodTest(int age)    {        this.age = age;    }    public void Sleep(string name,int age)    {        Console.WriteLine($"You have bean man,you must sleep alone,{name}");    }    public void Sleep(string name, string age)    {        Console.WriteLine($"You have bean {age} old,you must sleep alone,{name}");    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> -实用小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -C# -部分内容的总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Navicat破解</title>
+      <link href="/2022/10/09/navicat-po-jie/"/>
+      <url>/2022/10/09/navicat-po-jie/</url>
+      
+        <content type="html"><![CDATA[<p>参考文档：<br><a href="https://www.cnblogs.com/wjdzh/p/16523956.html#_label1">https://www.cnblogs.com/wjdzh/p/16523956.html#_label1</a><br>安装包我的百度网盘，经过实际体验可以破解。  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -破解软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -破解软件 -Navicat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OFFICE破解</title>
+      <link href="/2022/10/09/office-po-jie/"/>
+      <url>/2022/10/09/office-po-jie/</url>
+      
+        <content type="html"><![CDATA[<p>可以用过OFFICE tools进行下载office<br>然后通过HEUkms这个软件进行破解升级<br>实际效果win11升级激活码激活成功。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -破解软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -破解软件 -OFFICE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>无法启动计算机.上的服务</title>
       <link href="/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/"/>
       <url>/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/</url>
@@ -20,7 +508,7 @@
       
         <tags>
             
-            <tag> -C# -工作问题 -事件 </tag>
+            <tag> -C# -工作问题 -解决问题 -事件 </tag>
             
         </tags>
       
@@ -38,14 +526,20 @@
       
       <categories>
           
-          <category> -C# -日常学习 </category>
+          <category> C# </category>
+          
+          <category> 日常学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -基础学习 -事件 </tag>
+            <tag> C# </tag>
+            
+            <tag> 基础学习 </tag>
+            
+            <tag> 事件 </tag>
             
         </tags>
       
@@ -88,14 +582,20 @@
       
       <categories>
           
-          <category> -C# -日常学习 </category>
+          <category> C# </category>
+          
+          <category> 日常学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -基础学习 -委托 </tag>
+            <tag> C# </tag>
+            
+            <tag> 基础学习 </tag>
+            
+            <tag> 委托 </tag>
             
         </tags>
       
@@ -113,14 +613,20 @@
       
       <categories>
           
-          <category> -C# -日常学习 </category>
+          <category> C# </category>
+          
+          <category> 日常学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -基础学习 -类 </tag>
+            <tag> C# </tag>
+            
+            <tag> 基础学习 </tag>
+            
+            <tag> 类 </tag>
             
         </tags>
       
