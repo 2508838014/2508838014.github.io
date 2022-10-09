@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-09-26T14:00:18.694Z</updated>
+  <updated>2022-10-09T12:52:32.489Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无法启动计算机.上的服务</title>
+    <link href="https://2508838014.github.io/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/"/>
+    <id>https://2508838014.github.io/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/</id>
+    <published>2022-10-09T12:46:05.000Z</published>
+    <updated>2022-10-09T12:52:32.489Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;问题描述1&quot;&gt;&lt;a href=&quot;#问题描述1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-C# -平时学习" scheme="https://2508838014.github.io/categories/C-%E5%B9%B3%E6%97%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="-C# -工作问题 -事件" scheme="https://2508838014.github.io/tags/C-%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98-%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>C#事件学习-学习日志（1）</title>
