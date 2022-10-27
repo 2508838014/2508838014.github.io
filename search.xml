@@ -4,6 +4,486 @@
   
     
     <entry>
+      <title>C#-PadLeft（）,PadRight（）用法</title>
+      <link href="/2022/10/27/c-padleft-padright-yong-fa/"/>
+      <url>/2022/10/27/c-padleft-padright-yong-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-中PadLeft（）、PadRight（）的用法"><a href="#C-中PadLeft（）、PadRight（）的用法" class="headerlink" title="C#中PadLeft（）、PadRight（）的用法"></a>C#中PadLeft（）、PadRight（）的用法</h1><p>PS\n<br>简单来说就是给字符串实现补位。\n<br>PadRight：固定长度输出，左对齐\n<br>PadLeft：固定长度输出，右对齐\n<br>参数不同，表示含义不同\n</p><h2 id="1-PadLeft-Int32-n"><a href="#1-PadLeft-Int32-n" class="headerlink" title="1).PadLeft(Int32)\n"></a>1).PadLeft(Int32)\n</h2><p>返回一个新字符串，该字符串通过在此实例中的字符左侧填充空格来达到指定的总长度，从而实现右对齐。\n</p><h2 id="2-PadLeft-Int32-Char-n"><a href="#2-PadLeft-Int32-Char-n" class="headerlink" title="2).PadLeft(Int32, Char)\n"></a>2).PadLeft(Int32, Char)\n</h2><p>返回一个新字符串，该字符串通过在此实例中的字符左侧填充指定的 Unicode 字符来达到指定的总长度，从而使这些字符右对齐。\n<br>实例：string num=12 num.PadLeft(4, ‘0’); //结果为为 ‘0012’ //看字符串长度是否满足4位,不满足则在字符串左边以”0”补足)\n<br>PadLeft(int totalWidth, char paddingChar) //在字符串左边用 paddingChar 补足 totalWidth 长度\n<br>PadRight(int totalWidth, char paddingChar) //在字符串右边用 paddingChar 补足 totalWidth 长度\n</p><h2 id="例：-n"><a href="#例：-n" class="headerlink" title="例：\n"></a>例：\n</h2><p>示例：\n</p><ol><li>假如想输出AAAAA，可以用string.Empty.PadLeft(5,‘A’);</li><li>假如想输出：<br>可以用PadLeft实现：<pre class="line-numbers language-none"><code class="language-none">for(int i=1;i&lt;=4;i++)\n{Console.WriteLine(string.Empty.PadLeft(i,’*’));}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ol><p>转载自：<br><a href="https://docs.microsoft.com/zh-cn/dotnet/api/system.string.padleft?redirectedfrom=MSDN&amp;view=netframework-4.8#System_String_PadLeft_System_Int32">https://docs.microsoft.com/zh-cn/dotnet/api/system.string.padleft?redirectedfrom=MSDN&amp;view=netframework-4.8#System_String_PadLeft_System_Int32</a>_<br><a href="https://blog.csdn.net/xtfnpgy/article/details/24919145">https://blog.csdn.net/xtfnpgy/article/details/24919145</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> toString </tag>
+            
+            <tag> PadLeft() </tag>
+            
+            <tag> PadRight() </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-程序功能保活</title>
+      <link href="/2022/10/27/form-cao-zuo-cheng-xu-gong-neng-bao-huo/"/>
+      <url>/2022/10/27/form-cao-zuo-cheng-xu-gong-neng-bao-huo/</url>
+      
+        <content type="html"><![CDATA[<p>偶尔有的功能因为处理的事件过长。\n<br>需要进行延时处理，来确保进行功能不被后台直接回收\n<br>所以引用了一下函数，作用主要是界面保活\n</p><pre class="line-numbers language-none"><code class="language-none">public static bool Delay(int delayTime){    DateTime now = DateTime.Now;    int s;    do    {        TimeSpan spand = DateTime.Now - now;        s = spand.Seconds;        Application.DoEvents();    }    while (s &lt; delayTime);    return true;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Form </tag>
+            
+            <tag> 程序保活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C#-字节流与图片转换</title>
+      <link href="/2022/10/27/c-zi-jie-liu-yu-tu-pian-zhuan-huan/"/>
+      <url>/2022/10/27/c-zi-jie-liu-yu-tu-pian-zhuan-huan/</url>
+      
+        <content type="html"><![CDATA[<p>有的时候数据传输会使用字节流的模式进行传输。\n<br>字节流到达本地之后需要进行转换来进行对应的操作。\n</p><pre class="line-numbers language-none"><code class="language-none">            byte[] tempImgData= Encoding.Unicode.GetBytes(img.ToString());            MemoryStream stmBLOBData = new MemoryStream(tempImgData);//上面是将某种烈性转换成对应的字节流，//下面是将字节流转换成bitmap类型，并且保存。            Bitmap bt = new Bitmap，(stmBLOBData);            bt.Save($"D:\\image\\1_{DateTime.Now}.png", System.Drawing.Imaging.ImageFormat.Jpeg);            bt.Dispose();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常学习 </category>
+          
+          <category> 字节流与图片转换 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 图片转化 </tag>
+            
+            <tag> 字节流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>win服务start失败</title>
+      <link href="/2022/10/26/win-fu-wu-start-shi-bai/"/>
+      <url>/2022/10/26/win-fu-wu-start-shi-bai/</url>
+      
+        <content type="html"><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>试图加载格式不正确的程序\n</p><h1 id="出错场景"><a href="#出错场景" class="headerlink" title="出错场景"></a>出错场景</h1><p>Visual Studio 2019\n<br>尝试运行自己的win服务。\n<br>中间使用了其他人的dll-64位。\n</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在每个项目的属性界面，将它们的目标平台都设置成为64位，于dll保持一致。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>有的时候win服务需要引用其他dll来实现某些功能。\n<br>但是在一般的情况下64位的程序与32位的程序不能只能引用对应位数的dll文件。\n<br>如果不做设置，那样win服务就是默认是32位的，在面对64位程序就会出现错误\n<br>错误提示：<br>解决方案：切换成对应的x64或者x86程序。\n<br>win服务的要求更多一些。因为目前是有三个项目，分别负责form窗口，core，service创建\n<br>这三个项目都要统一设置成x64，或者是x86.\n<br>如果有一个没有设置，那样就会运行出错。\n</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题解决 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> win服务 </tag>
+            
+            <tag> 文件解决 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>string转坐标点</title>
+      <link href="/2022/10/26/string-zhuan-zuo-biao-dian/"/>
+      <url>/2022/10/26/string-zhuan-zuo-biao-dian/</url>
+      
+        <content type="html"><![CDATA[<p>有的时候需要将string转换成自己想要的格式。最常见的比如我需要一个点，但是用户可能输入类似[1,2,3,4,5,6]这样的格式，我们就需要将这个string类型转换成对应的点的格式。\n<br>示例代码如下：\n</p><pre class="line-numbers language-none"><code class="language-none">public HTuple StringToHTuplePose(string PointString){    string[] array = PointString.Split(new char[] { ',', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);    HTuple res = new HTuple(Convert.ToDouble(array[0]) / 1000, Convert.ToDouble(array[1]) / 1000, Convert.ToDouble(array[2]) / 1000,        Convert.ToDouble(array[3]), Convert.ToDouble(array[4]), Convert.ToDouble(array[5]), 0);    return res;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>该行为可以更容易地用逗号分隔值 (CSV) 文件之类的格式表示表格数据。 连续的逗号表示空白列。\n<br>可传递可选 StringSplitOptions.RemoveEmptyEntries 参数来排除返回数组中的任何空字符串。 \n要对返回的集合进行更复杂的处理，可使用 LINQ 来处理结果序列。\n</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> string操作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> string </tag>
+            
+            <tag> 坐标点 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>config文件使用</title>
+      <link href="/2022/10/26/config-wen-jian-shi-yong/"/>
+      <url>/2022/10/26/config-wen-jian-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p>工作技巧\n<br>config由于原本文件会自动生成一个.config文件，所以在使用的时候往往直接可以进行使用\n<br>为了方便对于config文件进行操作，这里创建一个ConfigHelper的类进行一些操作的示例，见代码1\n<br>代码1\n</p><pre class="line-numbers language-none"><code class="language-none">using System;using System.Collections.Generic;using System.Configuration;using System.Linq;using System.Text;using System.Text.RegularExpressions;using System.Threading.Tasks;namespace XmlRpcCore{    public static class ConfigHelper    {        public static string GetAppConfig(string FilePath, string strKey)        {            Configuration val = ConfigurationManager.OpenExeConfiguration(FilePath);            string[] allKeys = val.AppSettings.Settings.AllKeys;            foreach (string a in allKeys)            {                if (a == strKey)                {                    return val.AppSettings.Settings[strKey].Value.ToString();                }            }            return null;        }        public static void UpdateAppConfig(string FilePath, string newKey, string newValue)        {            Configuration val = ConfigurationManager.OpenExeConfiguration(FilePath);            bool flag = false;            string[] allKeys = val.AppSettings.Settings.AllKeys;            foreach (string a in allKeys)            {                if (a == newKey)                {                    flag = true;                }            }            if (flag)            {                val.AppSettings.Settings.Remove(newKey);            }            val.AppSettings.Settings.Add(newKey, newValue);            val.Save(ConfigurationSaveMode.Modified);            ConfigurationManager.RefreshSection("appSettings");        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>filepath：</p><pre class="line-numbers language-none"><code class="language-none">private string appPath = $"{Application.ExecutablePath}";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用示例：\n<br>第一步获取对应的路径\n</p><pre class="line-numbers language-none"><code class="language-none">string xmlPath = $"{AppDomain.CurrentDomain.BaseDirectory}machines.xml";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>第二步，获得数据，获得的类型都是string类型。\n<br>此处使用了上面代码1中的方法。\n</p><pre class="line-numbers language-none"><code class="language-none">parameters.IP = ConfigHelper.GetAppConfig(configFile, "IP");<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> 类库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> config </tag>
+            
+            <tag> Hepler </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XML使用</title>
+      <link href="/2022/10/26/xml-shi-yong/"/>
+      <url>/2022/10/26/xml-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p>在框架中使用XML几种方案。\n<br>首先是自己创建一个xml文档，注意要有一个父节点，此处的父节点名称machine\n<br>节点模样参考\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="utf-8" ?&gt;&lt;machine&gt;&lt;/machine&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>自己编写xmlhelper，需要后续进行修改。见代码1</p><p>代码1</p><pre class="line-numbers language-none"><code class="language-none">using System;using System.Collections.Generic;using System.Linq;using System.Text;using System.Threading.Tasks;using System.Xml;namespace XmlRpcCore{    public static class XmlHelper    {        public static bool ElementIsNotExist(string FilePath, string machineNum)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            if (xmlElement == null)                return true;            return false;        }        public static string GetAppXmlAttribute(string FilePath, string machineNum, string strKey)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            string res = xmlElement.GetAttribute(strKey);            return res;        }        /// &lt;summary&gt;        /// 修改对应xml的特性若key存在，则修改，不存在则增添        /// &lt;/summary&gt;        /// &lt;param name="FilePath"&gt;&lt;/param&gt;        /// &lt;param name="machineNum"&gt;&lt;/param&gt;        /// &lt;param name="newKey"&gt;&lt;/param&gt;        /// &lt;param name="newValue"&gt;&lt;/param&gt;        public static void UpdateAppXmlAttribute(string FilePath, string machineNum, string newKey, string newValue)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            string res = xmlElement.GetAttribute(newKey);            xmlElement.SetAttribute(newKey, newValue);            xmlDocument.Save(FilePath);        }        public static void UpdateCameraOne(string FilePath, string machineNum, string HeightCameraOne, string MovingDirectionCameraOne,            string DataFileCameraOne, string ImageFileCameraOne, string ModelFileCameraOne, string PositionCameraOne)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            xmlElement.SetAttribute("HeightCameraOne", HeightCameraOne);            xmlElement.SetAttribute("MovingDirectionCameraOne", MovingDirectionCameraOne);            xmlElement.SetAttribute("DataFileCameraOne", DataFileCameraOne);            xmlElement.SetAttribute("ImageFileCameraOne", ImageFileCameraOne);            xmlElement.SetAttribute("ModelFileCameraOne", ModelFileCameraOne);            xmlElement.SetAttribute("PositionCameraOne", PositionCameraOne);            xmlDocument.Save(FilePath);        }        public static void UpdateCameraTwo(string FilePath, string machineNum, string HeightCameraTwo, string MovingDirectionCameraTwo,    string DataFileCameraTwo, string ImageFileCameraTwo, string ModelFileCameraTwo, string PositionCameraTwo)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            xmlElement.SetAttribute("HeightCameraTwo", HeightCameraTwo);            xmlElement.SetAttribute("MovingDirectionCameraTwo", MovingDirectionCameraTwo);            xmlElement.SetAttribute("DataFileCameraTwo", DataFileCameraTwo);            xmlElement.SetAttribute("ImageFileCameraTwo", ImageFileCameraTwo);            xmlElement.SetAttribute("ModelFileCameraTwo", ModelFileCameraTwo);            xmlElement.SetAttribute("PositionCameraTwo", PositionCameraTwo);            xmlDocument.Save(FilePath);        }        public static void ReadCameraTwo(string FilePath, string machineNum, out string HeightCameraTwo, out string MovingDirectionCameraTwo,out string DataFileCameraTwo, out string ImageFileCameraTwo, out string ModelFileCameraTwo, out string PositionCameraTwo)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            HeightCameraTwo = xmlElement.GetAttribute("HeightCameraTwo");            MovingDirectionCameraTwo = xmlElement.GetAttribute("MovingDirectionCameraTwo");            DataFileCameraTwo = xmlElement.GetAttribute("DataFileCameraTwo");            ImageFileCameraTwo = xmlElement.GetAttribute("ImageFileCameraTwo");            ModelFileCameraTwo = xmlElement.GetAttribute("ModelFileCameraTwo");            PositionCameraTwo = xmlElement.GetAttribute("PositionCameraTwo");        }        public static void ReadCameraOne(string FilePath, string machineNum, out string HeightCameraOne, out string MovingDirectionCameraOne,out string DataFileCameraOne, out string ImageFileCameraOne, out string ModelFileCameraOne, out string PositionCameraOne)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            HeightCameraOne = xmlElement.GetAttribute("HeightCameraOne");            MovingDirectionCameraOne = xmlElement.GetAttribute("MovingDirectionCameraOne");            DataFileCameraOne = xmlElement.GetAttribute("DataFileCameraOne");            ImageFileCameraOne = xmlElement.GetAttribute("ImageFileCameraOne");            ModelFileCameraOne = xmlElement.GetAttribute("ModelFileCameraOne");            PositionCameraOne = xmlElement.GetAttribute("PositionCameraOne");        }        public static void RemoveAppXmlElement(string FilePath, string machineNum)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement rootElement = (XmlElement)xmlDocument.SelectSingleNode("machine");            XmlElement xmlElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + machineNum);            rootElement.RemoveChild(xmlElement);            xmlDocument.Save(FilePath);        }        public static void AddAppXmlElement(string FilePath, string machineNum)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement rootElement = (XmlElement)xmlDocument.SelectSingleNode("machine");            XmlElement xmlElement = xmlDocument.CreateElement(machineNum);            rootElement.AppendChild(xmlElement);            xmlDocument.Save(FilePath);        }        public static XmlNodeList AppXmlElementCount(string FilePath)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement rootElement = (XmlElement)xmlDocument.SelectSingleNode("machine");            XmlNodeList childNodes = rootElement.ChildNodes;            return childNodes;        }        public static void CopyAppXmlElement(string FilePath, string oldmachineNum, string newmachineNum)        {            XmlDocument xmlDocument = new XmlDocument();            xmlDocument.Load(FilePath);            XmlElement rootElement = (XmlElement)xmlDocument.SelectSingleNode("machine");            XmlElement oldElement = (XmlElement)xmlDocument.SelectSingleNode("machine/" + oldmachineNum);            XmlElement newElement = xmlDocument.CreateElement(newmachineNum);            foreach (XmlAttribute att in oldElement.Attributes)            {                newElement.SetAttribute(att.Name, att.Value);                            }                        rootElement.AppendChild(newElement);            xmlDocument.Save(FilePath);        }    }    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> 类库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> XML </tag>
+            
+            <tag> Helper </tag>
+            
+            <tag> class </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XML命名空间</title>
+      <link href="/2022/10/26/xml-ming-ming-kong-jian/"/>
+      <url>/2022/10/26/xml-ming-ming-kong-jian/</url>
+      
+        <content type="html"><![CDATA[<p>先说结论，两种命名空间，\n<br>一种默认命名空间，没有前缀。\n<br>二、显式名称空间声明，有前缀。\n<br>默认命名空间，无前缀的都使用\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;根元素 xmlns = “http://xugang.cnblogs.com” &gt;           &lt;子元素 attName =“myname” /&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>显式名称控件声明\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;根元素 xmlns: xg = “http://xugang.cnblogs.com” &gt;           &lt;xg:子元素  attName = “myname” /&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>注意：尽量只在根元素声明默认名称空间。若默认名称空间声明在非根元素，则容易被用户误解或忽略成没有名称空间的元素。所以，非根元素尽量不使用默认名称空间声明（推荐使用显式名称空间声明）。\n<br>名称空间的声明注意：\n<br>    * 双引号内必须是一个URI；<br>    * XML区分大小写，前缀名也不例外；<br>    * 前缀名建议采用英文缩写，也可以用中文（但不推荐用中文）；<br>    * 尽量避免同名前缀却对应不同URI的名称空间的情况，它将容易误导用户；<br>    * 尽量在根元素中声明所有的名称空间；<br>    * 如果一个属性所在的元素属于某显式声明的名称空间，一般就不需要为该属性添加前缀。<br>xml前缀的使用示例，两个xml文件合并成为一个xml文件，使用前缀进行区分。\n<br>IT部门\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="GB2312" standalone="yes"?&gt;&lt;资料&gt;   &lt;设备 编号="联想6515b"&gt;      &lt;生产商&gt;联想集团&lt;/生产商&gt;      &lt;地址&gt;北京市中关村127号&lt;/地址&gt;   &lt;/设备&gt;&lt;/资料&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>建筑部门\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="GB2312" standalone="yes" ?&gt;&lt;资料&gt;   &lt;设备 编号="中联F001"&gt;      &lt;生产商&gt;中联重科&lt;/生产商&gt;      &lt;地址&gt;湖南省长沙市新开铺113号&lt;/地址&gt;   &lt;/设备&gt;&lt;/资料&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>正确合并\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="GB2312" standalone="yes"?&gt;&lt;资料 xmlns:IT="http://www.lenovo.com" xmlns:建筑="myURN:中联"&gt;   &lt;设备 IT:编号="联想6515b" 建筑:编号="中联F001"&gt;      &lt;IT:设备名&gt;笔记本&lt;/IT:设备名&gt;      &lt;IT:生产商&gt;联想集团&lt;/IT:生产商&gt;      &lt;IT:地址&gt;北京市中关村127号&lt;/IT:地址&gt;      &lt;建筑:设备名&gt;起重机&lt;/建筑:设备名&gt;      &lt;建筑:生产商&gt;中联重科&lt;/建筑:生产商&gt;      &lt;建筑:地址&gt;湖南省长沙市新开铺113号&lt;/建筑:地址&gt;   &lt;/设备&gt;&lt;/资料&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>错误合并\n</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="GB2312" standalone="yes"?&gt;&lt;资料&gt;   &lt;设备 编号="联想6515b" 编号="中联F001"&gt;      &lt;设备名&gt;笔记本&lt;/设备名&gt;      &lt;生产商&gt;联想集团&lt;/生产商&gt;      &lt;地址&gt;北京市中关村127号&lt;/地址&gt;      &lt;设备名&gt;起重机&lt;/设备名&gt;      &lt;生产商&gt;中联重科&lt;/生产商&gt;      &lt;地址&gt;湖南省长沙市新开铺113号&lt;/地址&gt;   &lt;/设备&gt;&lt;/资料&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>相关知识，在复制节点的时候如果需要的话可以将对应的节点的命名空间一起复制\n</p><pre class="line-numbers language-none"><code class="language-none">XmlAttribute newAttribute = (XmlAttribute)sourceAttribute.CloneNode(true);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> XML </tag>
+            
+            <tag> 命名空间 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XML命名规则</title>
+      <link href="/2022/10/26/xml-ming-ming-gui-ze/"/>
+      <url>/2022/10/26/xml-ming-ming-gui-ze/</url>
+      
+        <content type="html"><![CDATA[<p>问题表现\n<br>XML节点元素不可以以数字和特殊符号，如“.”开头，否则用XMLDOMDocument写入将会出现Bug。\n<br>具体规则\n<br>• 名称可以含字母、数字以及其他的字符<br>• 名称不能以数字或者标点符号开始<br>• 名称不能以字符 “xml”（或者 XML、Xml）开始<br>• 名称不能包含空格<br>注意，名称不能包括，并不是说value不能包括。name与value不同的\n</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> XML </tag>
+            
+            <tag> 命名规则 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>获取当前程序路径</title>
+      <link href="/2022/10/26/huo-qu-dang-qian-cheng-xu-lu-jing/"/>
+      <url>/2022/10/26/huo-qu-dang-qian-cheng-xu-lu-jing/</url>
+      
+        <content type="html"><![CDATA[<p>获取路径的原因可以是很多。\n<br>需要获得当前文件的config文件中的属性\n<br>有些信息被写在xml文件之中\n<br>用户需要打开窗口选取文件，我们要获得用户打开的文件。\n<br>创建service服务的时候需要知道service服务的路径才可以进行对应的install or uninstall\n<br>当前最常使用的几种路径的获取方案如下。\n<br>这个是获得当前运行程序的目录，是一个exe文件。<br>在读取config文件的时候经常使用</p><pre class="line-numbers language-none"><code class="language-none">private string appPath = $"{Application.ExecutablePath}";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个是获取到当前运行的exe文件的目录\n<br>获取启动了应用程序的可执行文件的路径，不包括可执行文件的名称。\n<br>这个方法也是可靠的获取程序路径的方法。不过返回的路径最末并没有”"结尾。另外因为是Forms命名空间的。因此如果使用WPF还是不用的好。\n</p><pre class="line-numbers language-none"><code class="language-none">private String serviceFilePath= $"{Application.StartupPath}\\XmlRpcUR.exe";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个也是获得当前运行的exe文件的目录\n<br>获取当前 Thread\n<br>的当前应用程序域的基目录，它由程序集冲突解决程序用来探测程序集。\n<br>这个方法是以”"结尾\n</p><pre class="line-numbers language-none"><code class="language-none">string xmlPath = $"{AppDomain.CurrentDomain.BaseDirectory}\\machines.xml";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>此处有一些我的路径实例用作参考  </p><pre class="line-numbers language-none"><code class="language-none">private void DataFile_Click(object sender, EventArgs e){    OpenFileDialog dialog = new OpenFileDialog();    if (File.Exists(DataFileTextBox.Text))    {        int lastIndex = DataFileTextBox.Text.LastIndexOf("\\");//获取双斜杠所在的最后的一个索引位置        string filePath = DataFileTextBox.Text.Substring(0, lastIndex);        dialog.InitialDirectory = filePath;    }    else if (Directory.Exists(DataFileTextBox.Text))    {        dialog.InitialDirectory = DataFileTextBox.Text;    }    dialog.Multiselect = false;//该值确定是否可以选择多个文件    dialog.Title = "请选择文件";    //过滤器，根据后缀过滤文件，文件夹保留。此处分为两个部分，前者只显示txt文档与文件夹，后者显示全部文件与文件夹    dialog.Filter = "hed格式（*.hed）|*.hed|所有文件|*.*";    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)    {        string file = dialog.FileName;        DataFileTextBox.Text = file;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>以下内容来源于网络。\n<br>获取启动了应用程序的可执行文件的路径及文件名。\n<br>这个方法获取的是执行程序的完整文件名。是最可靠的方式，只需要去掉程序文件名就可以获得路径。\n</p><pre class="line-numbers language-none"><code class="language-none">System.Windows.Forms.Application.ExecutablePath<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>获取当前应用程序所在目录的路径，最后包含“\”。\n</p><pre class="line-numbers language-none"><code class="language-none">System.Threading.Thread.GetDomain().BaseDirectory<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>参考文章\n</p><pre class="line-numbers language-none"><code class="language-none">http://t.zoukankan.com/zhzhx-p-3115102.html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 程序路径 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日期格式文件名</title>
+      <link href="/2022/10/26/ri-qi-ge-shi-wen-jian-ming/"/>
+      <url>/2022/10/26/ri-qi-ge-shi-wen-jian-ming/</url>
+      
+        <content type="html"><![CDATA[<p>因为是自动化，需要批量保存的时候文件名就会依据日期来命名\n<br>需要进行格式转换的原因有：文件命名不能有冒号\n<br>可以创建依据月份，具体到某一天的文件夹来对于文件进行分类。\n</p><pre class="line-numbers language-none"><code class="language-none">strFileName=Format(System.DateTime.Now,"yyyyMMdd_hhmmss");精确到毫秒级别名称＝DateTime.Now.ToString("yyyyMMddhhmmss") + DateTime.Now.Millisecond.ToString() + "上传文件的后缀名";<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>不同的日期表达形式</p><pre class="line-numbers language-none"><code class="language-none">//2007年4月24日  this.TextBox1.Text = System.DateTime.Now.ToString("D");  //2007/4/24  this.TextBox2.Text = System.DateTime.Now.ToString("d");  //2007年4月24日 16:30:15  this.TextBox3.Text = System.DateTime.Now.ToString("F");  //2007年4月24日 16:30  this.TextBox4.Text = System.DateTime.Now.ToString("f");  //2007/4/24 16:30:15  this.TextBox5.Text = System.DateTime.Now.ToString("G");  //2007/4/24 16:30         this.TextBox6.Text = System.DateTime.Now.ToString("g");  //16:30:15  this.TextBox7.Text = System.DateTime.Now.ToString("T");  //16:30  this.TextBox8.Text = System.DateTime.Now.ToString("t");  //2007年4月24日 8:30:15  this.TextBox9.Text = System.DateTime.Now.ToString("U");  //2007-04-24 16:30:15Z  this.TextBox10.Text = System.DateTime.Now.ToString("u");  //4月24日      this.TextBox11.Text = System.DateTime.Now.ToString("m");  this.TextBox12.Text = System.DateTime.Now.ToString("M");  //Tue, 24 Apr 2007 16:30:15 GMT    this.TextBox13.Text = System.DateTime.Now.ToString("r");  this.TextBox14.Text = System.DateTime.Now.ToString("R");  //2007年4月   this.TextBox15.Text = System.DateTime.Now.ToString("y");  this.TextBox16.Text = System.DateTime.Now.ToString("Y");  //2007-04-24T15:52:19.1562500+08:00  this.TextBox17.Text = System.DateTime.Now.ToString("o");  this.TextBox18.Text = System.DateTime.Now.ToString("O");  //2007-04-24T16:30:15  this.TextBox19.Text = System.DateTime.Now.ToString("s");  //2007-04-24 15:52:19:9889  this.TextBox20.Text = System.DateTime.Now.ToString("yyyy-MM-dd HH：mm：ss：ffff");  //2007年04月24 15时56分48秒  this.TextBox21.Text = System.DateTime.Now.ToString("yyyy年MM月dd HH时mm分ss秒");  //星期二, 四月 24 2007  this.TextBox22.Text = System.DateTime.Now.ToString("dddd, MMMM dd yyyy");  //周三, 十二月 7 '11  this.TextBox23.Text = System.DateTime.Now.ToString("ddd, MMM d \"'\"yy");  //星期二, 四月 24  this.TextBox24.Text = System.DateTime.Now.ToString("dddd, MMMM dd");  //4/07  this.TextBox25.Text = System.DateTime.Now.ToString("M/yy");  //07-12-11  this.TextBox26.Text = System.DateTime.Now.ToString("dd-MM-yy");    string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };  //2011/12/6 昨天  this.TextBox1.Text = System.DateTime.Now.AddDays(-1).ToShortDateString();  //2011/12/8 明天  this.TextBox2.Text = DateTime.Now.AddDays(1).ToShortDateString();  //2011/12/4 本周星期天  this.TextBox3.Text = DateTime.Now.AddDays(Convert.ToDouble((0 - Convert.ToInt16(DateTime.Now.DayOfWeek)))).ToShortDateString();  //2011/12/10 本周星期六  this.TextBox4.Text = DateTime.Now.AddDays(Convert.ToDouble((6 - Convert.ToInt16(DateTime.Now.DayOfWeek)))).ToShortDateString();  //星期三 今天周几  this.TextBox5.Text = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];  //2011/11/27 上周日  this.TextBox6.Text = DateTime.Now.AddDays(Convert.ToDouble((0 - Convert.ToInt16(DateTime.Now.DayOfWeek))) - 7).ToShortDateString();  //2011/12/3 上周六  this.TextBox7.Text = DateTime.Now.AddDays(Convert.ToDouble((6 - Convert.ToInt16(DateTime.Now.DayOfWeek))) - 7).ToShortDateString();  //2011/12/11 下周日  this.TextBox8.Text = DateTime.Now.AddDays(Convert.ToDouble((0 - Convert.ToInt16(DateTime.Now.DayOfWeek))) + 7).ToShortDateString();  //2011/12/17 下周六  this.TextBox9.Text = DateTime.Now.AddDays(Convert.ToDouble((6 - Convert.ToInt16(DateTime.Now.DayOfWeek))) + 7).ToShortDateString();  //2011-12-01 本月一号  this.TextBox10.Text =DateTime.Now.ToString("yyyy-MM-01");  //2011/12/31 本月最后一天  this.TextBox11.Text=DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddMonths(1).AddDays(-1).ToShortDateString();  //2011/11/1 上个月一号  this.TextBox12.Text=System.DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddMonths(-1).ToShortDateString();  //2012/1/1 下个月一号  this.TextBox13.Text=System.DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddMonths(1).ToShortDateSring();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> DateTime </tag>
+            
+            <tag> 文件名称 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Form操作-打开文件弹窗</title>
+      <link href="/2022/10/26/form-cao-zuo-da-kai-wen-jian-dan-chuang/"/>
+      <url>/2022/10/26/form-cao-zuo-da-kai-wen-jian-dan-chuang/</url>
+      
+        <content type="html"><![CDATA[<p>有的时候需要让用户选择文件，我们获取文件路径，用于读取相对应的文件。<br>因此有了这个弹窗按钮。\n</p><pre class="line-numbers language-none"><code class="language-none">private void DataFile_Click(object sender, EventArgs e){    OpenFileDialog dialog = new OpenFileDialog();    if (File.Exists(DataFileTextBox.Text))    {        int lastIndex = DataFileTextBox.Text.LastIndexOf("\\");//获取双斜杠所在的最后的一个索引位置        string filePath = DataFileTextBox.Text.Substring(0, lastIndex);        dialog.InitialDirectory = filePath;    }    else if (Directory.Exists(DataFileTextBox.Text))    {        dialog.InitialDirectory = DataFileTextBox.Text;    }    dialog.Multiselect = false;//该值确定是否可以选择多个文件    dialog.Title = "请选择文件";    //过滤器，根据后缀过滤文件，文件夹保留。此处分为两个部分，前者只显示txt文档与文件夹，后者显示全部文件与文件夹    dialog.Filter = "hed格式（*.hed）|*.hed|所有文件|*.*";    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)    {        string file = dialog.FileName;        DataFileTextBox.Text = file;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Form操作 </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Form操作 </tag>
+            
+            <tag> 获得文件路径 </tag>
+            
+            <tag> 文件弹窗 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日志创建</title>
+      <link href="/2022/10/26/ri-zhi-chuang-jian/"/>
+      <url>/2022/10/26/ri-zhi-chuang-jian/</url>
+      
+        <content type="html"><![CDATA[<p>目前有两个方案。<br>一个布置简单，就是直接写入到一个txt文档之中。<br>另一个是比较专业looger4的使用</p><h1 id="直接写入文档"><a href="#直接写入文档" class="headerlink" title="直接写入文档"></a>直接写入文档</h1><p>相关代码如下：</p><pre class="line-numbers language-none"><code class="language-none">private static string filePath = @"C:\Users\Nestar\Desktop\Xml.txt";public static void WriteInfo(string info){    using (FileStream stream = new FileStream(filePath, FileMode.Append))    {        using (StreamWriter writer = new StreamWriter(stream))        {            writer.WriteLine($"{DateTime.Now},{info}");        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>filepath可以根据自己的想要生成的路径任意设置。\n</p><h1 id="创建logger日志"><a href="#创建logger日志" class="headerlink" title="创建logger日志"></a>创建logger日志</h1><p>比较专业logger4的使用\n</p><ol><li>在引用的位置通过Nuggert安装logger4</li><li>手动创建log4net.config文件,将下面的代码2拷入文件中</li><li>在对应项目的.cs(常见问文件命名时AssemblyInfo.cs)，中最下面添加代码3内容</li><li>（可选项）添加LoggerHelper方便对于logger日志的操作，相关代码见代码4</li></ol><h2 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h2><pre class="line-numbers language-none"><code class="language-none">&lt;log4net&gt;  &lt;root&gt;    &lt;level value="ALL" /&gt;    &lt;appender-ref ref="infoAppender" /&gt;    &lt;appender-ref ref="errorAppender" /&gt;    &lt;appender-ref ref="debugAppender" /&gt;  &lt;/root&gt;  &lt;!-- 日志的等级，它们由高到底分别为： OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; ALL --&gt;  &lt;!--信息日志配置--&gt;  &lt;appender name="infoAppender" type="log4net.Appender.RollingFileAppender"&gt;    &lt;param name="File" value="Logs\Info\info.log" /&gt;    &lt;param name="AppendToFile" value="true" /&gt;    &lt;param name="MaxFileSize" value="10240" /&gt;    &lt;param name="MaxSizeRollBackups" value="100" /&gt;    &lt;param name="PreserveLogFileNameExtension" value="true" /&gt;    &lt;param name="StaticLogFileName" value="false" /&gt;    &lt;param name="DatePattern" value="yyyyMMdd" /&gt;    &lt;param name="RollingStyle" value="Date" /&gt;    &lt;layout type="log4net.Layout.PatternLayout"&gt;      &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;    &lt;/layout&gt;    &lt;filter type="log4net.Filter.LevelRangeFilter"&gt;      &lt;param name="LevelMin" value="INFO" /&gt;      &lt;param name="LevelMax" value="INFO" /&gt;    &lt;/filter&gt;  &lt;/appender&gt;  &lt;!--调试日志配置--&gt;  &lt;appender name="debugAppender" type="log4net.Appender.RollingFileAppender"&gt;    &lt;param name="File" value="Logs\Debug\debug.log" /&gt;    &lt;param name="AppendToFile" value="true" /&gt;    &lt;param name="MaxFileSize" value="10240" /&gt;    &lt;param name="MaxSizeRollBackups" value="100" /&gt;    &lt;param name="PreserveLogFileNameExtension" value="true" /&gt;    &lt;param name="StaticLogFileName" value="false" /&gt;    &lt;param name="DatePattern" value="yyyyMMdd" /&gt;    &lt;param name="RollingStyle" value="Date" /&gt;    &lt;layout type="log4net.Layout.PatternLayout"&gt;      &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;    &lt;/layout&gt;    &lt;filter type="log4net.Filter.LevelRangeFilter"&gt;      &lt;param name="LevelMin" value="DEBUG" /&gt;      &lt;param name="LevelMax" value="DEBUG" /&gt;    &lt;/filter&gt;  &lt;/appender&gt;  &lt;!--错误日志配置--&gt;  &lt;appender name="errorAppender" type="log4net.Appender.RollingFileAppender"&gt;    &lt;param name="File" value="Logs\Error\Err.log" /&gt;    &lt;param name="AppendToFile" value="true" /&gt;    &lt;param name="MaxFileSize" value="10240" /&gt;    &lt;param name="MaxSizeRollBackups" value="100" /&gt;    &lt;param name="PreserveLogFileNameExtension" value="true" /&gt;    &lt;param name="StaticLogFileName" value="false" /&gt;    &lt;param name="DatePattern" value="yyyyMMdd" /&gt;    &lt;param name="RollingStyle" value="Date" /&gt;    &lt;layout type="log4net.Layout.PatternLayout"&gt;      &lt;conversionPattern value="%date [%thread] %-5level %logger - %message%newline" /&gt;    &lt;/layout&gt;    &lt;filter type="log4net.Filter.LevelRangeFilter"&gt;      &lt;param name="LevelMin" value="ERROR" /&gt;      &lt;param name="LevelMax" value="ERROR" /&gt;    &lt;/filter&gt;  &lt;/appender&gt;&lt;/log4net&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>需要反应的是，虽然此处没有明写Log，但是root是作为所有的父节点，默认是Log的名称。\n</p><pre class="line-numbers language-none"><code class="language-none">1.主要是log实例化有变化。通过GetLogger方法获取xml配种中gdLog4net的Logger2.xml中定义了logger，关于logger和root，可以参考文章：https://www.cnblogs.com/zhangchenliang/p/4546352.html 的后面部分内容，大概意思就是说root其实就是一个顶级的logger，所有其他logger都默认继承这个root。如果需要让logger阻断和root的联系，可以将logger的additivity设置为false。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>示例代码：</p><pre class="line-numbers language-none"><code class="language-none">&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;log4net&gt;  &lt;appender name="AccesssService_Err" type="log4net.Appender.RollingFileAppender"&gt;    &lt;!--日志路径--&gt;    &lt;param name="File" value="Errors\log.log" /&gt;    &lt;!--是否是向文件中追加日志--&gt;    &lt;param name="AppendToFile" value="true" /&gt;    &lt;!--log保留个数--&gt;    &lt;param name="MaxSizeRollBackups" value="200" /&gt;    &lt;!--单个日志文件大小--&gt;    &lt;param name="MaximumFileSize" value="5MB" /&gt;    &lt;!--日志文件名是否是固定不变的--&gt;    &lt;param name="StaticLogFileName" value="false" /&gt;    &lt;!--日志文件名格式为:2008-08-31.log--&gt;    &lt;DatePattern value="yyyy-MM-dd HH'时.log'"&gt;&lt;/DatePattern&gt;    &lt;lockingModel type="log4net.Appender.FileAppender+MinimalLock" /&gt;    &lt;!--按照何种方式产生多个日志文件(日期[Date],文件大小[Size],混合[Composite])--&gt;    &lt;param name="RollingStyle" value="Size" /&gt;    &lt;layout type="log4net.Layout.PatternLayout"&gt;      &lt;param name="ConversionPattern" value="记录时间：%date%n线程ID:[%thread] %n日志级别：%-5level%n记录位置：%location%n消息描述：%property{Message}%n异常：%exception%n消息：%message%newline%n------------------------------------------%n" /&gt;    &lt;/layout&gt;    &lt;filter type="log4net.Filter.LevelRangeFilter"&gt;      &lt;levelMin value="WARN" /&gt;      &lt;levelMax value="FATAL" /&gt;    &lt;/filter&gt;    &lt;filter type="log4net.Filter.DenyAllFilter" /&gt;  &lt;/appender&gt;  &lt;appender name="AccesssService_info" type="log4net.Appender.RollingFileAppender"&gt;    &lt;!--日志路径--&gt;    &lt;param name="File" value="MyLogs\log.log" /&gt;    &lt;!--是否是向文件中追加日志--&gt;    &lt;param name="AppendToFile" value="true" /&gt;    &lt;!--log保留个数--&gt;    &lt;param name="MaxSizeRollBackups" value="200" /&gt;    &lt;!--单个日志文件大小--&gt;    &lt;param name="MaximumFileSize" value="5MB" /&gt;    &lt;!--日志文件名是否是固定不变的--&gt;    &lt;param name="StaticLogFileName" value="false" /&gt;    &lt;!--日志文件名格式为:2008-08-31.log--&gt;    &lt;DatePattern value="yyyy-MM-dd HH'时.log'"&gt;&lt;/DatePattern&gt;    &lt;lockingModel type="log4net.Appender.FileAppender+MinimalLock" /&gt;    &lt;!--按照何种方式产生多个日志文件(日期[Date],文件大小[Size],混合[Composite])--&gt;    &lt;param name="RollingStyle" value="Size" /&gt;    &lt;layout type="log4net.Layout.PatternLayout"&gt;      &lt;param name="ConversionPattern" value="记录时间：%date%n线程ID:[%thread] %n日志级别：%-5level%n记录位置：%location%n消息描述：%property{Message}%n异常：%exception%n消息：%message%newline%n------------------------------------------%n" /&gt;    &lt;/layout&gt;    &lt;filter type="log4net.Filter.LevelRangeFilter"&gt;      &lt;levelMin value="DEBUG" /&gt;      &lt;levelMax value="INFO" /&gt;    &lt;/filter&gt;    &lt;filter type="log4net.Filter.DenyAllFilter" /&gt;  &lt;/appender&gt;  &lt;logger name="gdLog4net" additivity="false"&gt;    &lt;level value="DEBUG" /&gt;    &lt;appender-ref ref="AccesssService_Err" /&gt;    &lt;appender-ref ref="AccesssService_info" /&gt;  &lt;/logger&gt;&lt;/log4net&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">public class LogHelper{    private static ILog log = null;    public static ILog Log    {        get        {            if (log == null)            {                //log4.config表示log4的配置文件                string fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config", "log4.config");                log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(fileName));                log = LogManager.GetLogger("gdLog4net");            }            return log;        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="代码3"><a href="#代码3" class="headerlink" title="代码3"></a>代码3</h2><pre class="line-numbers language-none"><code class="language-none">[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", ConfigFileExtension = "config", Watch = true)]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>相关属性讲解，<br>ConfigFile:<br>ConfigFileExtension:根据类型加载<br>Watch</p><h2 id="代码4"><a href="#代码4" class="headerlink" title="代码4"></a>代码4</h2><pre class="line-numbers language-none"><code class="language-none">using log4net;using System;using System.Collections.Generic;using System.Linq;using System.Text;using System.Threading.Tasks;namespace XmlRpcApp{    internal class Logger    {        private static readonly ILog loginfo = LogManager.GetLogger("Log");//这里的 loginfo 和 log4net.config 里的名字要一样        public static void WriteLog(string info)        {            if (loginfo.IsInfoEnabled)            {                loginfo.Info(info);            }        }        public static void WriteLog(string info, Exception ex)        {            if (loginfo.IsErrorEnabled)            {                loginfo.Error(info, ex);            }        }        public static void DebugLog(string info)        {            if (loginfo.IsDebugEnabled)            {                loginfo.Debug(info);            }        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> log4net </tag>
+            
+            <tag> 日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Visual_Studio快捷键</title>
+      <link href="/2022/10/26/visual-studio-kuai-jie-jian/"/>
+      <url>/2022/10/26/visual-studio-kuai-jie-jian/</url>
+      
+        <content type="html"><![CDATA[<p>很多时候快捷键能够很大层次的简化自己的双手，方便自己。所以在网上找到了一些VS相关的快捷键<br>具体内容如下<br>快速构建构造函数<br>输入 ctor 然后按 TAB 键</p><p>快速构建自动属性<br>在变量那里，右击鼠标，点“重构”–“封装字段”</p><p>Visual Studio快捷键 [VS2008/VS2005]</p><hr><p>“cw” + Tab + Tab - Console.WriteLine();</p><p>“mbox” + Tab + Tab - Messagebox.Show();</p><p>“prop” + Tab + Tab - 含有Get、Set访问器的属性块</p><p>“propg” + Tab + Tab - 只读属性快</p><p>“propfull” + Tabl + Tab - 具有完整get、set访问器的属性快</p><p>封装属性的快捷键：ctrl+R+E<br>快速属性： 输入prop 两下TAB</p><p>VS系统通用快捷键：<br>比如#region的快捷键是：ctrl + k,s</p><p>1、自动排版(类似VC6中的Alt+F8）<br>编辑.格式化选定内容 Ctrl + K，Ctrl + F 根据周围的代码行，正确缩进选定的代码行。</p><p>2、注释与去掉注释功能。</p><p>编辑.注释选定内容 Ctrl + K，Ctrl + C 使用编程语言的正确注释语法将代码的当前行标记为注释。</p><p>编辑.取消注释选定内容 Ctrl + K，Ctrl + U 从代码的当前行中移除注释语法。</p><p>将插入点移动到文档中的下一个大括号处。<br>编辑.转到大括号 Ctrl + ] 将插入点移动到文档中的下一个大括号处。</p><p>编辑.向下滚动一行 Ctrl + 向下键 将文本向下滚动一行。仅可用于文本编辑器。<br>编辑.向上滚动一行 Ctrl + 向上键 将文本向上滚动一行。仅可用于文本编辑器。</p><p>怎么找到解决方案<br>视图.解决方案资源管理器 Ctrl + Alt + L 显示解决方案资源管理器，它列出当前解决方案中的项目和文件</p><p>显示“工具箱”<br>视图.工具箱 Ctrl + Alt + X 显示“工具箱”，其中包含可包括在代码中或与代码一起使用的控件和其他项。</p><p>清除项目中的所有断点<br>调试.删除所有断点 Ctrl + Shift + F9 清除项目中的所有断点。</p><p>调试.反汇编 Ctrl + Alt + D 显示“反汇编”窗口。<br>调试.切换断点 F9 在当前行设置或移除断点。</p><p>VS2008 快捷键<br>新建项目 Ctrl+shift+N<br>新建网站 shift+Alt+N<br>文件 Ctrl+N<br>打开项目/解决方案 Ctrl+shift+O<br>打开网站 shift+Alt+O<br>打开文件 Ctrl+O<br>保存当前文件 Ctrl+S<br>全部保存 Ctrl+Shift+S<br>添加新项 Ctrl+Shift+A<br>添加现有项 Shift+Alt+A<br>添加类 Shift+Alt+C<br>撤消 Ctrl+Z<br>重复 Ctrl+Y<br>转到 Ctrl+G<br>循环应用剪贴板中的复制项Ctrl+Shift+V<br>设置文档的格式 Ctrl+E，D<br>设置选定内容的格式Ctrl+E，F<br>转换为大写 Ctrl+Shift+U<br>转换为小写 Ctrl+U<br>删除水平空白Ctrl+E，<br>查看空白Ctrl+E,S<br>自动换行Ctrl+E,W<br>渐进式搜索Ctrl+I<br>注释选定内容Ctrl+E,C<br>取消注释选定内容Ctrl+E,U<br>快速查找 Ctrl+F<br>快速替换 Ctrl+H<br>在文件中查找 Ctrl+Shift+F<br>查找下一个 F3<br>查找上一个 Shift+F3<br>在文件中替换 Ctrl+Shift+H<br>查找符号 Alt+F12<br>切换书签 Ctrl+B，T<br>启用书签 Ctrl+B，E<br>上一书签 Ctrl+B，P<br>下一书签 Ctrl+B，N<br>清除书签 Ctrl+B，C<br>添加任务列表快捷方式Ctrl+E，T<br>切换大纲显示展开Ctrl+M，M<br>切换所有大纲显示Ctrl+M，L<br>停止大纲显示 Ctrl+M，P<br>折叠到定义 Ctrl+M，O<br>生产方法存根 Ctrl+K，M<br>列出成员 Ctrl+K，L<br>参数信息 Ctrl+K，P<br>快速信息 Ctrl+K，I<br>完成单词 Ctrl+K，W<br>插入代码段 Ctrl+K，X<br>外侧代码 Ctrl+K，S—–就是可选#region<br>代码 F7<br>设计器 Shift+F7<br>服务器资源管理器 Ctrl+W，L<br>解决方案资源管理器 Ctrl+W，S<br>类视图 Ctrl+W，c<br>代码定义窗口Ctrl+W，D<br>对象浏览器 Ctrl+W，J<br>错误列表 Ctrl+W，E<br>输出 Ctrl+W，O<br>属性窗口 Ctrl+W，P<br>任务列表 Ctrl+W，T<br>工具箱 Ctrl+W，X<br>全屏显示shift+Alt+Enter<br>向后定位 Ctrl+-<br>向前定位 Ctrl+Shift+-<br>属性页 Shift+F4<br>查找符号结果 Ctrl+W，Q<br>书签窗口 Ctrl+W，B<br>命令窗口 Ctrl+W，A<br>文档大纲 Ctrl+W，U<br>资源视图 Ctrl+W，R<br>宏资源管理器 Alt+F8<br>Web浏览器 Ctrl+W，W<br>重命名 F2<br>提取方法 Ctrl+R，M<br>封装字段 Ctrl+R，E<br>提取接口 Ctrl+R，I<br>将局部变量提升为参数 Ctrl+R,P<br>移除参数 Ctrl+R，V<br>重新排列参数 Ctrl+R，O<br>生成解决方案 F6<br>生成当前项目 Shift+F6<br>启动调试 F5<br>继续 F5<br>全部中断 Ctrl+Alt+Break<br>停止调试 Shift+F5<br>重新启动 Ctrl+Shift+F5<br>开始执行（不调试）Ctrl+F5<br>异常 Ctrl+D，E<br>逐语句 F11<br>跳出 Shift+F11<br>逐过程 F10<br>切换断点 F9<br>删除所有断点 Ctrl+Shift+F9<br>断点 Ctrl+D，B<br>即时 Ctrl+D，I<br>快速监视 Ctrl+D，Q<br>监视1 Ctrl+D，W<br>监视2 Ctrl+D+W，2<br>监视3 Ctrl+D+W，3<br>监视4 Ctrl+D+W，4<br>自动窗口Ctrl+D，A<br>局部变量 Ctrl+D，L<br>调用堆栈 Ctrl+D，C<br>线程 Ctrl+D，T<br>切换当前线程标志状态 Ctrl+8<br>仅显示标志的线程 Ctrl+9<br>模块 Ctrl+D，M<br>进程 Ctrl+D，P<br>反编译 Ctrl+Alt+D<br>寄存器 Ctrl+D，R<br>内存1 Ctrl+D，Y<br>内存2 Ctrl+Alt+M，2<br>内存3 Ctrl+Alt+M，3<br>内存4 Ctrl+Alt+M，4<br>附加到进程 Ctrl+Alt+P<br>代码段管理器 Ctrl+K，Ctrl+B<br>运行当前宏 Ctrl+Shift+P<br>记录当前宏 Ctrl+Shift+R<br>宏IDE Alt+F11<br>当前上下文中的测试 Ctrl+R，T<br>解决方案中的所有测试 Ctrl+R，A<br>如何实现 Ctrl+F1，H<br>搜索 Ctrl+F1,S<br>目录 Ctrl+F1，C<br>索引 Ctrl+F1，I<br>帮助收藏夹 Ctrl+F1，F<br>动态帮助 Ctrl+F1，D<br>索引结果 Ctrl+F1，T</p><hr><p>VS2005 常用快捷键<br>调试快捷键</p><p>F6: 生成解决方案<br>Ctrl+F6: 生成当前项目<br>F7: 查看代码<br>Shift+F7: 查看窗体设计器<br>F5: 启动调试<br>Ctrl+F5: 开始执行(不调试)<br>Shift+F5: 停止调试<br>Ctrl+Shift+F5: 重启调试<br>F9: 切换断点<br>Ctrl+F9: 启用/停止断点<br>Ctrl+Shift+F9: 删除全部断点<br>F10: 逐过程<br>Ctrl+F10: 运行到光标处<br>F11: 逐语句</p><p>编辑快捷键</p><p>Shift+Alt+Enter: 切换全屏编辑<br>Ctrl+B,T / Ctrl+K,K: 切换书签开关<br>Ctrl+B,N / Ctrl+K,N: 移动到下一书签<br>Ctrl+B,P: 移动到上一书签<br>Ctrl+B,C: 清除全部标签</p><p>Ctrl+I: 渐进式搜索<br>Ctrl+Shift+I: 反向渐进式搜索<br>Ctrl+F: 查找<br>Ctrl+Shift+F: 在文件中查找<br>F3: 查找下一个<br>Shift+F3: 查找上一个<br>Ctrl+H: 替换<br>Ctrl+Shift+H: 在文件中替换<br>Alt+F12: 查找符号(列出所有查找结果)<br>Ctrl+Shift+V: 剪贴板循环</p><p>Ctrl+左右箭头键: 一次可以移动一个单词<br>Ctrl+上下箭头键: 滚动代码屏幕，但不移动光标位置。<br>Ctrl+Shift+L: 删除当前行<br>Ctrl+M,M: 隐藏或展开当前嵌套的折叠状态<br>Ctrl+M,L: 将所有过程设置为相同的隐藏或展开状态<br>Ctrl+M,P: 停止大纲显示<br>Ctrl+E,S: 查看空白<br>Ctrl+E,W: 自动换行<br>Ctrl+G: 转到指定行<br>Shift+Alt+箭头键: 选择矩形文本<br>Alt+鼠标左按钮: 选择矩形文本<br>Ctrl+Shift+U: 全部变为大写<br>Ctrl+U: 全部变为小写</p><p>代码快捷键</p><p>Ctrl+J / Ctrl+K,L: 列出成员<br>Ctrl+Shift+空格键 / Ctrl+K,P: 参数信息<br>Ctrl+K,I: 快速信息<br>Ctrl+E,C / Ctrl+K,C: 注释选定内容<br>Ctrl+E,U / Ctrl+K,U: 取消选定注释内容</p><p>Ctrl+K,M: 生成方法存根<br>Ctrl+K,X: 插入代码段<br>Ctrl+K,S: 插入外侧代码</p><p>F12: 转到所调用过程或变量的定义</p><p>窗口快捷键</p><p>Ctrl+W,W: 浏览器窗口<br>Ctrl+W,S: 解决方案管理器<br>Ctrl+W,C: 类视图<br>Ctrl+W,E: 错误列表<br>Ctrl+W,O: 输出视图<br>Ctrl+W,P: 属性窗口<br>Ctrl+W,T: 任务列表<br>Ctrl+W,X: 工具箱<br>Ctrl+W,B: 书签窗口<br>Ctrl+W,U: 文档大纲</p><p>Ctrl+D,B: 断点窗口<br>Ctrl+D,I: 即时窗口<br>Ctrl+Tab: 活动窗体切换<br>Ctrl+Shift+N: 新建项目<br>Ctrl+Shift+O: 打开项目<br>Ctrl+Shift+S: 全部保存<br>Shift+Alt+C: 新建类<br>Ctrl+Shift+A: 新建项</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Visual Studio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>定期清理文件与文件夹</title>
+      <link href="/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/"/>
+      <url>/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/</url>
+      
+        <content type="html"><![CDATA[<h1 id="定期清理某种类型文件"><a href="#定期清理某种类型文件" class="headerlink" title="定期清理某种类型文件"></a>定期清理某种类型文件</h1><p>有的时候需要定期清理图片等。\n</p><pre class="line-numbers language-none"><code class="language-none">/// &lt;summary&gt;/// 定期清除文件/// &lt;/summary&gt;/// &lt;param name="fileDirect"&gt;文件夹&lt;/param&gt;/// &lt;param name="postFix"&gt;文件后缀&lt;/param&gt;/// &lt;param name="saveDay"&gt;保存天数&lt;/param&gt;private static void DeleteFile(string fileDirect, string postFix, int saveDay){    DateTime nowtime = DateTime.Now; //获取当前时间    string[] files = Directory.GetFiles(fileDirect, postFix, SearchOption.AllDirectories);  //获取该目录下所有 .txt文件    foreach (string file in files)    {        FileInfo fileInfo = new FileInfo(file);        TimeSpan t = nowtime - fileInfo.CreationTime;  //当前时间  减去 文件创建时间        int day = t.Days;        if (day &gt; saveDay)   //保存的时间 ；  单位：天        {            File.Delete(file);  //删除超过时间的文件        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="使用方式–异步使用"><a href="#使用方式–异步使用" class="headerlink" title="使用方式–异步使用"></a>使用方式–异步使用</h2><pre class="line-numbers language-none"><code class="language-none">private static void RegularDeleteImage(){    int saveDays = 0; //保存天数，可根据实际需求定义    string path = @"C:\Users\Nestar\Pictures\Saved Pictures"; //保存数据的路径    //开启一个异步线程定期检查是否可以删除文件    Task.Run(() =&gt;    {        while (true)        {            DeleteFile(path, "*.jpg", saveDays);            Thread.Sleep(1000 * 60 * 60 * 24); //每隔24H检查一遍        }    });}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="“yyMMdd”-命名的文件夹进行删除"><a href="#“yyMMdd”-命名的文件夹进行删除" class="headerlink" title="(“yyMMdd”)命名的文件夹进行删除"></a>(“yyMMdd”)命名的文件夹进行删除</h1><p>补充一个保留文件夹名称，删除其他文件夹的方法。\n<br>本来还想说这个方案好蠢，没想到蠢人竟是我自己。\n<br>在上面使用被驳回之后，立马用到了下面的删除文件夹以及子文件夹。\n<br>上面的方案是将文件根据创建的日期进行删除，这里是根据不同日期的图片放在依据日期命名的文件夹中。\n<br>然后依据日期命名的文件夹进行删除。\n</p><pre class="line-numbers language-none"><code class="language-none">public static void RegularCleanFile(){    int saveDays = 0; //保存天数，可根据实际需求定义    string path = @"C:\Users\Nestar\Pictures\Saved Pictures"; //保存数据的路径    var saveFileFolderList = new List&lt;string&gt;(); //保存哪些文件夹    for (int i = 0; i &lt; saveDays; i++)    {        var saveFile = DateTime.Now.AddDays(-i).ToString("yyyyMMdd");//这部分需要根据需要自己定制        saveFileFolderList.Add(saveFile);    }    //开启一个异步线程定期检查是否可以删除文件    Task.Run(() =&gt;    {        while (true)        {            if (Directory.Exists(path))            {                DirectoryInfo di = new DirectoryInfo(path);                var fsiArr = di.GetFileSystemInfos(); //获取所有的文件、文件夹                foreach (var fsi in fsiArr)                {                    if (fsi is DirectoryInfo) //判断是否文件夹                    {                        //判断是否在删除范畴内                        if (!saveFileFolderList.Exists(o =&gt; fsi.Name.Contains(o)))                        {                            DirectoryInfo delDi = new DirectoryInfo(fsi.FullName);                            delDi.Delete(true); //删除文件夹及文件                        }                    }                }            }            Thread.Sleep(1000 * 60 * 60 * 6); //每隔6H检查一遍        }    });    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>既然有删除，那自然也要有创建文件夹，经过测试\n</p><ol><li>可以一次性创建多层目录，</li><li>创建的文件夹如果已经存在不会报错，也不会删除之前的文件夹重新创建，而是没有任何动作。<pre class="line-numbers language-none"><code class="language-none">DirectoryInfo directoryInfo = new DirectoryInfo($"C:\\image\\{DateTime.Now.ToString("yyMMdd")}");directoryInfo.Create();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常学习 </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 文件夹 </tag>
+            
+            <tag> 定期清理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-连接SQLServer</title>
+      <link href="/2022/10/23/c-lian-jie-sqlserver/"/>
+      <url>/2022/10/23/c-lian-jie-sqlserver/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据库的连接"><a href="#数据库的连接" class="headerlink" title="数据库的连接"></a>数据库的连接</h1><p>万一有的时候需要我去连接SQL Server，这边提前准备\n</p><p>相关的代码如下\n</p><pre class="line-numbers language-none"><code class="language-none">static void Main(string[] args){    // 声明一个SqlConnectionStringBuilder对象    SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();    scsb.DataSource = "DESKTOP-BR0Q3FS\\SQLEXPRESS";    // 设置数据源服务器，注意这里的单斜线变双斜线了    //scsb.UserID = "sa";     // 设置用户名    //scsb.Password = "mima"; // 设置密码    scsb.InitialCatalog = "xiaoxieDatabase"; // 设置要访问的数据库    //scsb.ConnectionString = "SSPI";    scsb.IntegratedSecurity = true;    // 创建连接    SqlConnection SqlCon = new SqlConnection(scsb.ToString());    // 打开数据库    SqlCon.Open();    // 1、创建要执行的SQL查询语句    string str = "select Name from Teachers where Gender = 'man'";    // 2、创建用于执行SQL查询语句的对象    SqlCommand SqlCom = new SqlCommand(str, SqlCon);// 参数1：SQL语句字符串。参数2：已经打开的数据库    // 3、执行对象的SQL查询语句并接受结果    SqlDataReader Sdr = SqlCom.ExecuteReader();    // 4、读取结果的数据    while (Sdr.Read())    {        Console.WriteLine("姓名：" + Sdr["Name"].ToString());    }    Console.ReadLine();}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作技巧 </category>
+          
+          <category> 日常学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> 数据库 </tag>
+            
+            <tag> SQL Server </tag>
+            
+            <tag> 连接 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Form操作-TextBox仅数字等输入，离开检测</title>
       <link href="/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/"/>
       <url>/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/</url>
@@ -15,7 +495,7 @@
           
           <category> Form操作 </category>
           
-          <category> 工作小技巧 </category>
+          <category> 工作技巧 </category>
           
           <category> TextBox </category>
           
@@ -426,14 +906,16 @@
       
       <categories>
           
-          <category> -实用小技巧 </category>
+          <category> 实用小技巧 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -部分内容的总结 </tag>
+            <tag> C# </tag>
+            
+            <tag> 部分内容的总结 </tag>
             
         </tags>
       
@@ -451,14 +933,16 @@
       
       <categories>
           
-          <category> -破解软件 </category>
+          <category> 破解软件 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -破解软件 -Navicat </tag>
+            <tag> 破解软件 </tag>
+            
+            <tag> Navicat </tag>
             
         </tags>
       
@@ -476,14 +960,16 @@
       
       <categories>
           
-          <category> -破解软件 </category>
+          <category> 破解软件 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -破解软件 -OFFICE </tag>
+            <tag> 破解软件 </tag>
+            
+            <tag> OFFICE </tag>
             
         </tags>
       
@@ -492,7 +978,7 @@
     
     
     <entry>
-      <title>无法启动计算机.上的服务</title>
+      <title>无法启动计算机上的服务</title>
       <link href="/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/"/>
       <url>/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/</url>
       
@@ -501,14 +987,22 @@
       
       <categories>
           
-          <category> -C# -平时学习 </category>
+          <category> C# </category>
+          
+          <category> 平时学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -工作问题 -解决问题 -事件 </tag>
+            <tag> C# </tag>
+            
+            <tag> 事件 </tag>
+            
+            <tag> 工作问题 </tag>
+            
+            <tag> 解决问题 </tag>
             
         </tags>
       
@@ -557,14 +1051,20 @@
       
       <categories>
           
-          <category> -日常学习 </category>
+          <category> 日常学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -基础学习 -软件工程 -内聚 -耦合 </tag>
+            <tag> 基础学习 </tag>
+            
+            <tag> 软件工程 </tag>
+            
+            <tag> 内聚 </tag>
+            
+            <tag> 耦合 </tag>
             
         </tags>
       
@@ -644,14 +1144,22 @@
       
       <categories>
           
-          <category> -Basler -.Net </category>
+          <category> Basler </category>
+          
+          <category> .Net </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -basler -.NET -c# -基础语法 </tag>
+            <tag> basler </tag>
+            
+            <tag> .NET </tag>
+            
+            <tag> c# </tag>
+            
+            <tag> 基础语法 </tag>
             
         </tags>
       
@@ -669,14 +1177,20 @@
       
       <categories>
           
-          <category> -C# -日常学习 </category>
+          <category> C# </category>
+          
+          <category> 日常学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> -C# -基础学习 -类 </tag>
+            <tag> C# </tag>
+            
+            <tag> 基础学习 </tag>
+            
+            <tag> 类 </tag>
             
         </tags>
       

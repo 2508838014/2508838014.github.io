@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-10-09T13:36:19.614Z</updated>
+  <updated>2022-10-27T13:47:38.504Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -17,11 +17,502 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>C#-PadLeft（）,PadRight（）用法</title>
+    <link href="https://2508838014.github.io/2022/10/27/c-padleft-padright-yong-fa/"/>
+    <id>https://2508838014.github.io/2022/10/27/c-padleft-padright-yong-fa/</id>
+    <published>2022-10-27T13:44:46.000Z</published>
+    <updated>2022-10-27T13:47:38.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C-中PadLeft（）、PadRight（）的用法&quot;&gt;&lt;a href=&quot;#C-中PadLeft（）、PadRight（）的用法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="toString" scheme="https://2508838014.github.io/tags/toString/"/>
+    
+    <category term="PadLeft()" scheme="https://2508838014.github.io/tags/PadLeft/"/>
+    
+    <category term="PadRight()" scheme="https://2508838014.github.io/tags/PadRight/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Form操作-程序功能保活</title>
+    <link href="https://2508838014.github.io/2022/10/27/form-cao-zuo-cheng-xu-gong-neng-bao-huo/"/>
+    <id>https://2508838014.github.io/2022/10/27/form-cao-zuo-cheng-xu-gong-neng-bao-huo/</id>
+    <published>2022-10-27T13:42:27.000Z</published>
+    <updated>2022-10-27T13:43:24.386Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;偶尔有的功能因为处理的事件过长。\n&lt;br&gt;需要进行延时处理，来确保进行功能不被后台直接回收\n&lt;br&gt;所以引用了一下函数，作用主要是界面保活\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Form" scheme="https://2508838014.github.io/tags/Form/"/>
+    
+    <category term="程序保活" scheme="https://2508838014.github.io/tags/%E7%A8%8B%E5%BA%8F%E4%BF%9D%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#-字节流与图片转换</title>
+    <link href="https://2508838014.github.io/2022/10/27/c-zi-jie-liu-yu-tu-pian-zhuan-huan/"/>
+    <id>https://2508838014.github.io/2022/10/27/c-zi-jie-liu-yu-tu-pian-zhuan-huan/</id>
+    <published>2022-10-27T13:39:58.000Z</published>
+    <updated>2022-10-27T13:41:12.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有的时候数据传输会使用字节流的模式进行传输。\n&lt;br&gt;字节流到达本地之后需要进行转换来进行对应的操作。\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;         </summary>
+        
+      
+    
+    
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="字节流与图片转换" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E5%AD%97%E8%8A%82%E6%B5%81%E4%B8%8E%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="图片转化" scheme="https://2508838014.github.io/tags/%E5%9B%BE%E7%89%87%E8%BD%AC%E5%8C%96/"/>
+    
+    <category term="字节流" scheme="https://2508838014.github.io/tags/%E5%AD%97%E8%8A%82%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win服务start失败</title>
+    <link href="https://2508838014.github.io/2022/10/26/win-fu-wu-start-shi-bai/"/>
+    <id>https://2508838014.github.io/2022/10/26/win-fu-wu-start-shi-bai/</id>
+    <published>2022-10-26T13:58:36.000Z</published>
+    <updated>2022-10-27T13:36:05.948Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;p&gt;试图加载格式不正确的程序\n&lt;/p&gt;
+&lt;h1 id=&quot;出错场景&quot;&gt;&lt;a href=&quot;#出错场景&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="问题解决" scheme="https://2508838014.github.io/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="win服务" scheme="https://2508838014.github.io/tags/win%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="文件解决" scheme="https://2508838014.github.io/tags/%E6%96%87%E4%BB%B6%E8%A7%A3%E5%86%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>string转坐标点</title>
+    <link href="https://2508838014.github.io/2022/10/26/string-zhuan-zuo-biao-dian/"/>
+    <id>https://2508838014.github.io/2022/10/26/string-zhuan-zuo-biao-dian/</id>
+    <published>2022-10-26T13:55:04.000Z</published>
+    <updated>2022-10-26T13:56:27.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有的时候需要将string转换成自己想要的格式。最常见的比如我需要一个点，但是用户可能输入类似[1,2,3,4,5,6]这样的格式，我们就需要将这个string类型转换成对应的点的格式。\n&lt;br&gt;示例代码如下：\n&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="string操作" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/string%E6%93%8D%E4%BD%9C/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="string" scheme="https://2508838014.github.io/tags/string/"/>
+    
+    <category term="坐标点" scheme="https://2508838014.github.io/tags/%E5%9D%90%E6%A0%87%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>config文件使用</title>
+    <link href="https://2508838014.github.io/2022/10/26/config-wen-jian-shi-yong/"/>
+    <id>https://2508838014.github.io/2022/10/26/config-wen-jian-shi-yong/</id>
+    <published>2022-10-26T13:47:24.000Z</published>
+    <updated>2022-10-27T13:38:06.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;工作技巧\n&lt;br&gt;config由于原本文件会自动生成一个.config文件，所以在使用的时候往往直接可以进行使用\n&lt;br&gt;为了方便对于config文件进行操作，这里创建一个ConfigHelper的类进行一些操作的示例，见代码1\n&lt;br&gt;代码1\n&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="类库" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E7%B1%BB%E5%BA%93/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="config" scheme="https://2508838014.github.io/tags/config/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML使用</title>
+    <link href="https://2508838014.github.io/2022/10/26/xml-shi-yong/"/>
+    <id>https://2508838014.github.io/2022/10/26/xml-shi-yong/</id>
+    <published>2022-10-26T13:41:50.000Z</published>
+    <updated>2022-10-26T13:43:27.934Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在框架中使用XML几种方案。\n&lt;br&gt;首先是自己创建一个xml文档，注意要有一个父节点，此处的父节点名称machine\n&lt;br&gt;节点模样参考\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="类库" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E7%B1%BB%E5%BA%93/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="XML" scheme="https://2508838014.github.io/tags/XML/"/>
+    
+    <category term="Helper" scheme="https://2508838014.github.io/tags/Helper/"/>
+    
+    <category term="class" scheme="https://2508838014.github.io/tags/class/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML命名空间</title>
+    <link href="https://2508838014.github.io/2022/10/26/xml-ming-ming-kong-jian/"/>
+    <id>https://2508838014.github.io/2022/10/26/xml-ming-ming-kong-jian/</id>
+    <published>2022-10-26T13:38:10.000Z</published>
+    <updated>2022-10-26T13:45:03.502Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;先说结论，两种命名空间，\n&lt;br&gt;一种默认命名空间，没有前缀。\n&lt;br&gt;二、显式名称空间声明，有前缀。\n&lt;br&gt;默认命名空间，无前缀的都使用\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="基础学习" scheme="https://2508838014.github.io/categories/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="XML" scheme="https://2508838014.github.io/tags/XML/"/>
+    
+    <category term="命名空间" scheme="https://2508838014.github.io/tags/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XML命名规则</title>
+    <link href="https://2508838014.github.io/2022/10/26/xml-ming-ming-gui-ze/"/>
+    <id>https://2508838014.github.io/2022/10/26/xml-ming-ming-gui-ze/</id>
+    <published>2022-10-26T13:36:43.000Z</published>
+    <updated>2022-10-26T13:37:40.622Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;问题表现\n&lt;br&gt;XML节点元素不可以以数字和特殊符号，如“.”开头，否则用XMLDOMDocument写入将会出现Bug。\n&lt;br&gt;具体规则\n&lt;br&gt;• 名称可以含字母、数字以及其他的字符&lt;br&gt;• 名称不能以数字或者标点符号开始&lt;br&gt;• 名称不能以字符</summary>
+        
+      
+    
+    
+    
+    <category term="基础学习" scheme="https://2508838014.github.io/categories/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="XML" scheme="https://2508838014.github.io/tags/XML/"/>
+    
+    <category term="命名规则" scheme="https://2508838014.github.io/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>获取当前程序路径</title>
+    <link href="https://2508838014.github.io/2022/10/26/huo-qu-dang-qian-cheng-xu-lu-jing/"/>
+    <id>https://2508838014.github.io/2022/10/26/huo-qu-dang-qian-cheng-xu-lu-jing/</id>
+    <published>2022-10-26T13:32:20.000Z</published>
+    <updated>2022-10-26T13:46:55.993Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;获取路径的原因可以是很多。\n&lt;br&gt;需要获得当前文件的config文件中的属性\n&lt;br&gt;有些信息被写在xml文件之中\n&lt;br&gt;用户需要打开窗口选取文件，我们要获得用户打开的文件。\n&lt;br&gt;创建service服务的时候需要知道service服务的路径才可以进行对应的i</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="程序路径" scheme="https://2508838014.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%B7%AF%E5%BE%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日期格式文件名</title>
+    <link href="https://2508838014.github.io/2022/10/26/ri-qi-ge-shi-wen-jian-ming/"/>
+    <id>https://2508838014.github.io/2022/10/26/ri-qi-ge-shi-wen-jian-ming/</id>
+    <published>2022-10-26T13:29:40.000Z</published>
+    <updated>2022-10-26T13:31:47.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;因为是自动化，需要批量保存的时候文件名就会依据日期来命名\n&lt;br&gt;需要进行格式转换的原因有：文件命名不能有冒号\n&lt;br&gt;可以创建依据月份，具体到某一天的文件夹来对于文件进行分类。\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="DateTime" scheme="https://2508838014.github.io/tags/DateTime/"/>
+    
+    <category term="文件名称" scheme="https://2508838014.github.io/tags/%E6%96%87%E4%BB%B6%E5%90%8D%E7%A7%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Form操作-打开文件弹窗</title>
+    <link href="https://2508838014.github.io/2022/10/26/form-cao-zuo-da-kai-wen-jian-dan-chuang/"/>
+    <id>https://2508838014.github.io/2022/10/26/form-cao-zuo-da-kai-wen-jian-dan-chuang/</id>
+    <published>2022-10-26T13:27:17.000Z</published>
+    <updated>2022-10-26T13:28:52.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有的时候需要让用户选择文件，我们获取文件路径，用于读取相对应的文件。&lt;br&gt;因此有了这个弹窗按钮。\n&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;private void</summary>
+        
+      
+    
+    
+    
+    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="获得文件路径" scheme="https://2508838014.github.io/tags/%E8%8E%B7%E5%BE%97%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
+    
+    <category term="文件弹窗" scheme="https://2508838014.github.io/tags/%E6%96%87%E4%BB%B6%E5%BC%B9%E7%AA%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日志创建</title>
+    <link href="https://2508838014.github.io/2022/10/26/ri-zhi-chuang-jian/"/>
+    <id>https://2508838014.github.io/2022/10/26/ri-zhi-chuang-jian/</id>
+    <published>2022-10-26T13:21:01.000Z</published>
+    <updated>2022-10-26T13:26:10.051Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;目前有两个方案。&lt;br&gt;一个布置简单，就是直接写入到一个txt文档之中。&lt;br&gt;另一个是比较专业looger4的使用&lt;/p&gt;
+&lt;h1 id=&quot;直接写入文档&quot;&gt;&lt;a href=&quot;#直接写入文档&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="log4net" scheme="https://2508838014.github.io/tags/log4net/"/>
+    
+    <category term="日志" scheme="https://2508838014.github.io/tags/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual_Studio快捷键</title>
+    <link href="https://2508838014.github.io/2022/10/26/visual-studio-kuai-jie-jian/"/>
+    <id>https://2508838014.github.io/2022/10/26/visual-studio-kuai-jie-jian/</id>
+    <published>2022-10-26T13:19:17.000Z</published>
+    <updated>2022-10-26T13:20:39.445Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;很多时候快捷键能够很大层次的简化自己的双手，方便自己。所以在网上找到了一些VS相关的快捷键&lt;br&gt;具体内容如下&lt;br&gt;快速构建构造函数&lt;br&gt;输入 ctor 然后按 TAB</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Visual Studio" scheme="https://2508838014.github.io/tags/Visual-Studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>定期清理文件与文件夹</title>
+    <link href="https://2508838014.github.io/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/"/>
+    <id>https://2508838014.github.io/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/</id>
+    <published>2022-10-26T13:13:01.000Z</published>
+    <updated>2022-10-26T13:14:20.801Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;定期清理某种类型文件&quot;&gt;&lt;a href=&quot;#定期清理某种类型文件&quot; class=&quot;headerlink&quot; title=&quot;定期清理某种类型文件&quot;&gt;&lt;/a&gt;定期清理某种类型文件&lt;/h1&gt;&lt;p&gt;有的时候需要定期清理图片等。\n&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="文件夹" scheme="https://2508838014.github.io/tags/%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    
+    <category term="定期清理" scheme="https://2508838014.github.io/tags/%E5%AE%9A%E6%9C%9F%E6%B8%85%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-连接SQLServer</title>
+    <link href="https://2508838014.github.io/2022/10/23/c-lian-jie-sqlserver/"/>
+    <id>https://2508838014.github.io/2022/10/23/c-lian-jie-sqlserver/</id>
+    <published>2022-10-23T01:57:07.000Z</published>
+    <updated>2022-10-26T13:18:34.761Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数据库的连接&quot;&gt;&lt;a href=&quot;#数据库的连接&quot; class=&quot;headerlink&quot; title=&quot;数据库的连接&quot;&gt;&lt;/a&gt;数据库的连接&lt;/h1&gt;&lt;p&gt;万一有的时候需要我去连接SQL</summary>
+        
+      
+    
+    
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="数据库" scheme="https://2508838014.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="SQL Server" scheme="https://2508838014.github.io/tags/SQL-Server/"/>
+    
+    <category term="连接" scheme="https://2508838014.github.io/tags/%E8%BF%9E%E6%8E%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Form操作-TextBox仅数字等输入，离开检测</title>
     <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/"/>
     <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/</id>
     <published>2022-10-09T13:11:11.000Z</published>
-    <updated>2022-10-09T13:36:19.614Z</updated>
+    <updated>2022-10-18T13:46:12.989Z</updated>
     
     
       
@@ -36,9 +527,9 @@
     
     <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
     
-    <category term="工作小技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
     
-    <category term="TextBox" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/TextBox/"/>
+    <category term="TextBox" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/TextBox/"/>
     
     
     <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
@@ -140,487 +631,6 @@
     <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
     
     <category term="二次确认" scheme="https://2508838014.github.io/tags/%E4%BA%8C%E6%AC%A1%E7%A1%AE%E8%AE%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IP设置</title>
-    <link href="https://2508838014.github.io/2022/10/09/ip-she-zhi/"/>
-    <id>https://2508838014.github.io/2022/10/09/ip-she-zhi/</id>
-    <published>2022-10-09T13:08:36.000Z</published>
-    <updated>2022-10-09T13:42:11.796Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;IP校验&quot;&gt;&lt;a href=&quot;#IP校验&quot; class=&quot;headerlink&quot; title=&quot;IP校验&quot;&gt;&lt;/a&gt;IP校验&lt;/h1&gt;&lt;p&gt;检查输入是否符合IP格式，建议与IP是否未空混合使用&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="IP设置" scheme="https://2508838014.github.io/tags/IP%E8%AE%BE%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Form操作-菜单栏与下拉框</title>
-    <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-cai-dan-lan-yu-xia-la-kuang/"/>
-    <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-cai-dan-lan-yu-xia-la-kuang/</id>
-    <published>2022-10-09T13:07:11.000Z</published>
-    <updated>2022-10-09T13:38:29.066Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;窗口上端的菜单栏&lt;br&gt;MenuItemInstallService&lt;br&gt;记得添加一个menuScrip属性的控件&lt;br&gt;设置之后依次添加，见天click事件也是可以的。&lt;br&gt;下拉框&lt;br&gt;combox&lt;br&gt;Combox.selectIndex表示当前所选择的值的编号</summary>
-        
-      
-    
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="菜单栏" scheme="https://2508838014.github.io/tags/%E8%8F%9C%E5%8D%95%E6%A0%8F/"/>
-    
-    <category term="下拉框" scheme="https://2508838014.github.io/tags/%E4%B8%8B%E6%8B%89%E6%A1%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Form操作-TextBox显示服务状态</title>
-    <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-xian-shi-fu-wu-zhuang-tai/"/>
-    <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-xian-shi-fu-wu-zhuang-tai/</id>
-    <published>2022-10-09T13:05:49.000Z</published>
-    <updated>2022-10-09T13:37:13.863Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;TextBox显示状态（status）&quot;&gt;&lt;a href=&quot;#TextBox显示状态（status）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="TextBox" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/TextBox/"/>
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="TextBox" scheme="https://2508838014.github.io/tags/TextBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>管理员权限运行程序</title>
-    <link href="https://2508838014.github.io/2022/10/09/guan-li-yuan-quan-xian-yun-xing-cheng-xu/"/>
-    <id>https://2508838014.github.io/2022/10/09/guan-li-yuan-quan-xian-yun-xing-cheng-xu/</id>
-    <published>2022-10-09T13:04:49.000Z</published>
-    <updated>2022-10-09T13:31:52.683Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在工作中由于使用的系统进程，这个需要管理员权限才可以实现对于进程的访问。因此打包出来的程序也是需要系统权限的验证。  &lt;/p&gt;
-&lt;h1 id=&quot;两种方案&quot;&gt;&lt;a href=&quot;#两种方案&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="管理员权限" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="管理员权限程序" scheme="https://2508838014.github.io/tags/%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修改命名空间</title>
-    <link href="https://2508838014.github.io/2022/10/09/xiu-gai-ming-ming-kong-jian/"/>
-    <id>https://2508838014.github.io/2022/10/09/xiu-gai-ming-ming-kong-jian/</id>
-    <published>2022-10-09T13:04:27.000Z</published>
-    <updated>2022-10-09T13:50:08.724Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考链接&lt;br&gt;&lt;a href=&quot;https://www.jb51.net/article/252677.htm&quot;&gt;https://www.jb51.net/article/252677.htm&lt;/a&gt;&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="修改命名空间" scheme="https://2508838014.github.io/tags/%E4%BF%AE%E6%94%B9%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>批处理.bat返回上一层目录</title>
-    <link href="https://2508838014.github.io/2022/10/09/pi-chu-li-bat-fan-hui-shang-yi-ceng-mu-lu/"/>
-    <id>https://2508838014.github.io/2022/10/09/pi-chu-li-bat-fan-hui-shang-yi-ceng-mu-lu/</id>
-    <published>2022-10-09T13:04:12.000Z</published>
-    <updated>2022-10-09T13:51:37.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;批处理目前看到的应用只有win的。bat文件中&lt;br&gt;这次遇见的问题是我文件自动导出到下一层，但是我需要使用上一层的某个exe，这个就是需要对于批处理文件的路径有一定的认识&lt;br&gt;我需要C：\ batch \路径。我如何才能获得这条道路？ 它工作正常如果我给绝对路径 - </summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="批处理" scheme="https://2508838014.github.io/categories/C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E6%89%B9%E5%A4%84%E7%90%86/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="批处理" scheme="https://2508838014.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AutoResetEvent与Waitone与set</title>
-    <link href="https://2508838014.github.io/2022/10/09/autoresetevent-yu-waitone-yu-set/"/>
-    <id>https://2508838014.github.io/2022/10/09/autoresetevent-yu-waitone-yu-set/</id>
-    <published>2022-10-09T13:03:30.000Z</published>
-    <updated>2022-10-09T13:48:35.352Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;AutoResetEvent a1 = new AutoResetEvent(false);&lt;br&gt;不传入false默认为true，不会阻塞线程，所以必须传false。&lt;br&gt;WaitOne(int)； WaitOne(int,bool)；</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="AutoResetEvent" scheme="https://2508838014.github.io/categories/C/AutoResetEvent/"/>
-    
-    <category term="waitone" scheme="https://2508838014.github.io/categories/C/AutoResetEvent/waitone/"/>
-    
-    <category term="set" scheme="https://2508838014.github.io/categories/C/AutoResetEvent/waitone/set/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/C/AutoResetEvent/waitone/set/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="AutoResetEvent" scheme="https://2508838014.github.io/tags/AutoResetEvent/"/>
-    
-    <category term="waitone" scheme="https://2508838014.github.io/tags/waitone/"/>
-    
-    <category term="set" scheme="https://2508838014.github.io/tags/set/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何获取列的构造方法以及对应的参数列表</title>
-    <link href="https://2508838014.github.io/2022/10/09/ru-he-huo-qu-lie-de-gou-zao-fang-fa-yi-ji-dui-ying-de-can-shu-lie-biao/"/>
-    <id>https://2508838014.github.io/2022/10/09/ru-he-huo-qu-lie-de-gou-zao-fang-fa-yi-ji-dui-ying-de-can-shu-lie-biao/</id>
-    <published>2022-10-09T13:02:48.000Z</published>
-    <updated>2022-10-09T13:45:46.890Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;顾名思义，仅仅知道类的名字的时候去构造函数会很困难，通过这种方法可以获取对应的构造函数。&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;Type type =</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="类的构造函数与参数列表" scheme="https://2508838014.github.io/tags/%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Win服务的创建与卸载</title>
-    <link href="https://2508838014.github.io/2022/10/09/win-fu-wu-de-chuang-jian-yu-xie-zai/"/>
-    <id>https://2508838014.github.io/2022/10/09/win-fu-wu-de-chuang-jian-yu-xie-zai/</id>
-    <published>2022-10-09T13:02:10.000Z</published>
-    <updated>2022-10-09T13:55:29.807Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;win服务的创建，参考链接  &lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="Win服务" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/Win%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="Win服务" scheme="https://2508838014.github.io/tags/Win%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>根据方法名与参数列表调用对应方法</title>
-    <link href="https://2508838014.github.io/2022/10/09/gen-ju-fang-fa-ming-yu-can-shu-lie-biao-diao-yong-dui-ying-fang-fa/"/>
-    <id>https://2508838014.github.io/2022/10/09/gen-ju-fang-fa-ming-yu-can-shu-lie-biao-diao-yong-dui-ying-fang-fa/</id>
-    <published>2022-10-09T13:01:47.000Z</published>
-    <updated>2022-10-09T13:23:58.166Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;顾名思义，有的时候会使用RPC技术来实现一些方法的远程调用。有时候因为是使用其他人编写好的方法，让自己不能像xmlrpc.net描述的那种进行直接调用，但是可以获得需要调用的方法名称与参数列表，以及对应的值。面对这样的情况，就有了以下的代码。&lt;br&gt;这里是主要的实现方法&lt;b</summary>
-        
-      
-    
-    
-    
-    <category term="-实用小技巧" scheme="https://2508838014.github.io/categories/%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="-C# -部分内容的总结" scheme="https://2508838014.github.io/tags/C-%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E7%9A%84%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Navicat破解</title>
-    <link href="https://2508838014.github.io/2022/10/09/navicat-po-jie/"/>
-    <id>https://2508838014.github.io/2022/10/09/navicat-po-jie/</id>
-    <published>2022-10-09T13:01:04.000Z</published>
-    <updated>2022-10-09T13:16:01.871Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考文档：&lt;br&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="-破解软件" scheme="https://2508838014.github.io/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="-破解软件 -Navicat" scheme="https://2508838014.github.io/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6-Navicat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OFFICE破解</title>
-    <link href="https://2508838014.github.io/2022/10/09/office-po-jie/"/>
-    <id>https://2508838014.github.io/2022/10/09/office-po-jie/</id>
-    <published>2022-10-09T13:00:42.000Z</published>
-    <updated>2022-10-09T13:17:33.820Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;可以用过OFFICE</summary>
-        
-      
-    
-    
-    
-    <category term="-破解软件" scheme="https://2508838014.github.io/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="-破解软件 -OFFICE" scheme="https://2508838014.github.io/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6-OFFICE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无法启动计算机.上的服务</title>
-    <link href="https://2508838014.github.io/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/"/>
-    <id>https://2508838014.github.io/2022/10/09/wu-fa-qi-dong-ji-suan-ji-shang-de-fu-wu/</id>
-    <published>2022-10-09T12:46:05.000Z</published>
-    <updated>2022-10-09T13:20:31.828Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;问题描述1&quot;&gt;&lt;a href=&quot;#问题描述1&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="-C# -平时学习" scheme="https://2508838014.github.io/categories/C-%E5%B9%B3%E6%97%B6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="-C# -工作问题 -解决问题 -事件" scheme="https://2508838014.github.io/tags/C-%E5%B7%A5%E4%BD%9C%E9%97%AE%E9%A2%98-%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98-%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#事件学习-学习日志（1）</title>
-    <link href="https://2508838014.github.io/2022/09/21/c-shi-jian-xue-xi-xue-xi-ri-zhi-1/"/>
-    <id>https://2508838014.github.io/2022/09/21/c-shi-jian-xue-xi-xue-xi-ri-zhi-1/</id>
-    <published>2022-09-21T02:08:04.000Z</published>
-    <updated>2022-10-09T13:30:02.004Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;事件模型的五个组成部分&quot;&gt;&lt;a href=&quot;#事件模型的五个组成部分&quot; class=&quot;headerlink&quot; title=&quot;事件模型的五个组成部分&quot;&gt;&lt;/a&gt;事件模型的五个组成部分&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;事件的拥有者（event</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/categories/C/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="基础学习" scheme="https://2508838014.github.io/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="事件" scheme="https://2508838014.github.io/tags/%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>耦合与内聚学习-学习日志（4）</title>
-    <link href="https://2508838014.github.io/2022/09/14/c-yu-fa-xue-xi-xue-xi-ri-zhi-4/"/>
-    <id>https://2508838014.github.io/2022/09/14/c-yu-fa-xue-xi-xue-xi-ri-zhi-4/</id>
-    <published>2022-09-14T13:02:46.000Z</published>
-    <updated>2022-09-14T14:23:21.602Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;软件要做到高内聚，低耦合。&lt;br&gt;内聚就是一个模块内部各成分之间相关联的成都的度量&lt;br&gt;耦合就是程序结构中哥哥模块的相互关联的度量  &lt;/p&gt;
-&lt;h2 id=&quot;内聚的分类：由高到低&quot;&gt;&lt;a href=&quot;#内聚的分类：由高到低&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="-日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="-基础学习 -软件工程 -内聚 -耦合" scheme="https://2508838014.github.io/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E5%86%85%E8%81%9A-%E8%80%A6%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#语法学习-学习日志（3）</title>
-    <link href="https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/"/>
-    <id>https://2508838014.github.io/2022/09/12/c-yu-fa-xue-xi-xue-xi-ri-zhi-3/</id>
-    <published>2022-09-12T07:32:25.000Z</published>
-    <updated>2022-10-09T13:30:00.881Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;前言，此处代码使用VS2022，。net6的模式，全部都是在主函数的个实例，所以可以直接实例化一些类。&lt;br&gt;一些工作中遇见的不懂得语法进行学习&lt;br&gt;主要分为1.反射，2.特性，3.委托，4.？？与？。等，5.where&lt;br&gt;6.class类一些基础特点，7.as的作用</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/categories/C/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="基础学习" scheme="https://2508838014.github.io/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="委托" scheme="https://2508838014.github.io/tags/%E5%A7%94%E6%89%98/"/>
     
   </entry>
   
