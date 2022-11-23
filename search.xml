@@ -4,6 +4,190 @@
   
     
     <entry>
+      <title>C-TCP_Client-学习日志（7）</title>
+      <link href="/2022/11/23/c-tcp-client-xue-xi-ri-zhi-7/"/>
+      <url>/2022/11/23/c-tcp-client-xue-xi-ri-zhi-7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TCP连接"><a href="#TCP连接" class="headerlink" title="TCP连接"></a>TCP连接</h1><p>tcpClent</p><pre class="line-numbers language-none"><code class="language-none">using System;using System.Collections.Generic;using System.Net;using System.Net.Sockets;using System.Text;using System.Threading;namespace Test.TCPClient{    class Program    {        static void Main(string[] args)        {            //socket            Socket tcpClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);            //ip            IPAddress ipAddress = new IPAddress(new byte[] { 127, 0, 0, 1 });            //ip + Port(端口)            IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 30000);            //连接服务器端            tcpClient.Connect(ipEndPoint);            Console.WriteLine("链接上服务器端了");            //向服务器发送消息            //转码为byte字节发送            try {                Thread.Sleep(5000);                tcpClient.SendTimeout = 2000;                int a=tcpClient.Send(Encoding.UTF8.GetBytes("我连接上了"));            }            catch(Exception ex)            {                Console.WriteLine($"{ex}");            }                        //分配1024个字节大小的内存给message            byte[] message = new byte[1024];            tcpClient.ReceiveTimeout = 2000;            int length=0;            //接收消息            try            {                length = tcpClient.Receive(message);            }            catch(Exception ex)            {                if(ex.Message==  "由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。")                {                    Console.WriteLine("1053");                }                var a=ex.InnerException;                var b=ex.GetHashCode();                if (ex.HResult == 1053)                {                    Console.WriteLine("1053");                }            }                        //转码为string接收            string data = Encoding.UTF8.GetString(message, 0, length);            Console.WriteLine("收到服务器消息：" + data);            //关闭Socket            tcpClient.Close();            Console.WriteLine("Hello World!");        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Helper </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Hepler </tag>
+            
+            <tag> TCP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-TCP_server-学习日志（7）</title>
+      <link href="/2022/11/23/c-tcp-server-xue-xi-ri-zhi-7/"/>
+      <url>/2022/11/23/c-tcp-server-xue-xi-ri-zhi-7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TCPServer"><a href="#TCPServer" class="headerlink" title="TCPServer"></a>TCPServer</h1><pre class="line-numbers language-none"><code class="language-none">public void TcpListen(){    try    {       myIP = IPAddress.Parse("127.0.0.1");//要using System.Net        IPEndPoint MyServer = new IPEndPoint(myIP, 30000);        socketWatch = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);        socketWatch.Bind(MyServer);        //最大连接数        socketWatch.Listen(10);        StartListern(socketWatch);    }    catch (Exception ex)    {        throw ex;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">private void StartListern(Socket socket){    while (true)    {        //表示接收到信息        Socket socketConnect = socket.Accept();        byte[] bytes = new byte[1024 * 1024];                Task.Run(() =&gt;        {            int reciveLength = socketConnect.Receive(bytes);            string reciveString = Encoding.Default.GetString(bytes);            Console.WriteLine(reciveString);            byte[] sendbytes = Encoding.Default.GetBytes("收到请返回");            socketConnect.Send(sendbytes);        });    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Helper </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Hepler </tag>
+            
+            <tag> TCP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-RPC_Server-学习日志（6）</title>
+      <link href="/2022/11/23/c-rpc-server-xue-xi-ri-zhi-6/"/>
+      <url>/2022/11/23/c-rpc-server-xue-xi-ri-zhi-6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-RPC通用版本"><a href="#C-RPC通用版本" class="headerlink" title="C#-RPC通用版本"></a>C#-RPC通用版本</h1><p>双方约定好的程序有哪些</p><pre class="line-numbers language-none"><code class="language-none">class XmlService : XmlRpcListenerService{    [XmlRpcMethod("XmlService.Add")]    public int Add(int a, int b)    {        return a + b;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>[XMLRpcMethod(“**”)]server具有的函数的名称\n</p><pre class="line-numbers language-none"><code class="language-none">public class Service{    System.Collections.IDictionary props = new System.Collections.Hashtable();    HttpChannel channel;    public Service()    {        props["name"] = "localhost";        props["port"] = 7762;        channel = new HttpChannel(props, null, new XmlRpcServerFormatterSinkProvider());    }    public bool ServiceStart()    {        try        {            Logger.WriteLog("服务准备开启");            ServiceHelper.WriteInfo(DateTime.Now + "服务准备开启");            ChannelServices.RegisterChannel(channel, false);            RemotingConfiguration.RegisterWellKnownServiceType(typeof(XmlService), "XmlService.rem", WellKnownObjectMode.Singleton);            return true;        }        catch        {            Logger.WriteLog(DateTime.Now+"XML-RPC服务开启失败");            ServiceHelper.WriteInfo("XML-RPC服务开启失败");            return false;        }    }    public void ServiceStop()    {        ChannelServices.UnregisterChannel(channel);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Helper </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Hepler </tag>
+            
+            <tag> RPC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-RPC_Client-学习日志（6）</title>
+      <link href="/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/"/>
+      <url>/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-RPC-Client"><a href="#C-RPC-Client" class="headerlink" title="C#-RPC-Client"></a>C#-RPC-Client</h1><pre class="line-numbers language-none"><code class="language-none">[XmlRpcUrl("http://localhost:7762/XmlService.rem")]public interface IXmlServer : IXmlRpcProxy{    [XmlRpcMethod("XmlService.Add")]    int Add(int a, int b);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">static void Main(string[] args){    try    {        IXmlServer proxy = XmlRpcProxyGen.Create&lt;IXmlServer&gt;();        Console.WriteLine("Synchronous call：");        Console.WriteLine("state #45 is {0}", proxy.Add(12,34));    }    catch (XmlRpcFaultException fex)    {        Console.WriteLine(fex.FaultString);    }    catch (Exception ex)    {        Console.WriteLine(ex.Message);    }    Console.WriteLine("到此结束");    Console.ReadLine();}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Helper </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Hepler </tag>
+            
+            <tag> RPC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-CsvHelper-学习日志（6）</title>
+      <link href="/2022/11/23/c-csvhelper-xue-xi-ri-zhi-6/"/>
+      <url>/2022/11/23/c-csvhelper-xue-xi-ri-zhi-6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>CsvHelper 是一个用于读写 CSV 文件的.NET库。极其快速，灵活且易于使用。\n</p><p>CsvHelper 建立在.NET Standard 2.0 之上，几乎可以在任何地方运行。\n<br>CsvHelper可以通过Nuget安装。</p><h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><table><thead><tr><th>模块</th><th>功能</th></tr></thead><tbody><tr><td>CsvHelper</td><td>读写 CSV 数据的核心类。</td></tr><tr><td>CsvHelper.Configuration</td><td>配置 CsvHelper 读写行为的类。</td></tr><tr><td>CsvHelper.Configuration.Attributes</td><td>配置 CsvHelper 的特性。</td></tr><tr><td>CsvHelper.Expressions</td><td>生成 LINQ 表达式的类。</td></tr><tr><td>CsvHelper.TypeConversion</td><td>将 CSV 字段与 .NET 类型相互转换的类。</td></tr></tbody></table><h1 id="写入"><a href="#写入" class="headerlink" title="写入"></a>写入</h1><h2 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h2><pre class="line-numbers language-none"><code class="language-none">public class Foo{    public int ID { get; set; }    public string Name { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="写入所有数据"><a href="#写入所有数据" class="headerlink" title="写入所有数据"></a>写入所有数据</h2><p>覆盖掉之前的数据。</p><pre class="line-numbers language-none"><code class="language-none">var records = new List&lt;Foo&gt;{    new Foo { ID = 1, Name = "Tom" },    new Foo { ID = 2, Name = "Jerry" },};using (var writer = new StreamWriter("foo.csv")){    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))    {        csv.WriteRecords(records);    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="逐条写入"><a href="#逐条写入" class="headerlink" title="逐条写入"></a>逐条写入</h2><p>默认没有换行与标题\n</p><pre class="line-numbers language-none"><code class="language-none">using (var writer = new StreamWriter("foo.csv")){    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))    {        foreach (var record in records)        {            csv.WriteRecord(record);        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>逐条写入加入标题，并且添加换行。</p><pre class="line-numbers language-none"><code class="language-none">using (var writer = new StreamWriter("Test.csv")){    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))    {        //单独写一行的时候，不会自动添加Header，并且写一行（Header或者数据）都不会自动换行，需要手动换行。        csv.WriteHeader&lt;Person&gt;();//写Header        csv.NextRecord();//写Header后换行        foreach (var record in records)        {            csv.WriteRecord(record);            csv.NextRecord();            //csv.WriteRecord(record);        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>注意这个写法是覆盖掉原来文件，还可以追加写入。var writer = new StreamWriter(“Test.csv”)的第二个参数改为true，就是追加写入。注意标题不要重复输入。</p><h2 id="逐字段写入"><a href="#逐字段写入" class="headerlink" title="逐字段写入"></a>逐字段写入</h2><pre class="line-numbers language-none"><code class="language-none">using (var writer = new StreamWriter("foo.csv")){    using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))    {        csv.WriteHeader&lt;Foo&gt;();        csv.NextRecord();        foreach (var record in records)        {            csv.WriteField(record.ID);            csv.WriteField(record.Name);            csv.NextRecord();        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h1><h2 id="读取所有记录"><a href="#读取所有记录" class="headerlink" title="读取所有记录"></a>读取所有记录</h2><pre class="line-numbers language-none"><code class="language-none">using (var reader = new StreamReader("foo.csv")){    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))    {        var records = csv.GetRecords&lt;Foo&gt;();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="逐条读取"><a href="#逐条读取" class="headerlink" title="逐条读取"></a>逐条读取</h2><pre class="line-numbers language-none"><code class="language-none">using (var reader = new StreamReader("foo.csv")){    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))    {        while (csv.Read())        {            var record = csv.GetRecord&lt;Foo&gt;();        }    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>GetRecords&lt;T&gt; 方法通过 yield 返回一个 IEnumerable&lt;T&gt;，并不会将内容一次全部读进内存，除非调用了 ToList 或 ToArray 方法。所以这种逐条读取的写法没有太多必要。</code></pre><h2 id="读取单个字段"><a href="#读取单个字段" class="headerlink" title="读取单个字段"></a>读取单个字段</h2><p>两种方案，一种根据index，另一种根据标题。</p><pre class="line-numbers language-none"><code class="language-none">using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture)){    csv.Read();    csv.ReadHeader();    while (csv.Read())    {    //方案1        var id = csv.GetField&lt;int&gt;(0);        //方案2        var name = csv.GetField&lt;string&gt;("Name");    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>逐行读取时，可以不管标题行，但是，这里不行。\n</p><p>csv.Read(); 这句是读取标题，如果没有的话，while 循环第一次取到的是标题，肯定会报错。\n</p><p>csv.ReadHeader(); 这句是给标题赋值，如果没有的话，csv.GetField<string>(“Name”) 会报找不到标题。\n<br>使用 TryGetField 可以防止意外的报错。\n<br><code>csv.TryGetField(0, out int id);</code></string></p><h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><p><em>Index</em>特性用于标记字段顺序。<br>在读取文件时候，如果没有标题，就只能通过顺序来确定字段。</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    [Index(0)]    public int ID { get; set; }    [Index(1)]    public string Name { get; set; }}using (var reader = new StreamReader("Test.csv")){    var config = new CsvConfiguration(CultureInfo.InvariantCulture)    {        HasHeaderRecord = false,    };    using (var csv = new CsvReader(reader, config))    {        var records_IEnumable = csv.GetRecords&lt;Foo&gt;();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>HasHeaderRecord = false, 配置告知 CsvReader 没有标题。必须要加这一行，否则会默认第一行为标题而跳过，导致最后的结果中少了一行。如果数据量比较多，会很难发现这个 bug。当位true的时候，但是找不到合适的标题，则会报错。<br>在写入文件的时候，会按 Index 顺序写入。如果不想写入标题，也需要添加 HasHeaderRecord = false;\n<br>以下写法已经被弃用。</p></blockquote><pre class="line-numbers language-none"><code class="language-none">public class Foo{    [Index(0)]    public int ID { get; set; }    [Index(1)]    public string Name { get; set; }}    using (var reader = new StreamReader("foo.csv")){    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))    {        csv.Configuration.HasHeaderRecord = false;        var records = csv.GetRecords&lt;Foo&gt;().ToList();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Name"><a href="#Name" class="headerlink" title="Name"></a>Name</h2><p>如果字段名称和列名不一致，可以使用 Name 属性。\n</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    [Name("id")]    public int ID { get; set; }    [Name("name")]    public string Name { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="NameIndex"><a href="#NameIndex" class="headerlink" title="NameIndex"></a>NameIndex</h2><p>NameIndex 用于处理 CSV 文件中的同名列。</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [Name("Name")]    [NameIndex(0)]    public string FirstName { get; set; }    [Name("Name")]    [NameIndex(1)]    public string LastName { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Ignore"><a href="#Ignore" class="headerlink" title="Ignore"></a>Ignore</h2><p>忽略字段</p><h2 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h2><p>读取时如果找不到匹配的字段，则忽略。</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [Optional]    public string Remarks { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h2><p>当读取的字段为空时 Default 特性可为其指定默认值。\n</p><p>Default 特性仅在读取时有效，写入时是不会将空值替换为默认值写入的。\n</p><h2 id="NullValues"><a href="#NullValues" class="headerlink" title="NullValues"></a>NullValues</h2><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [NullValues("None", "none", "Null", "null")]    public string None { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>读取文件时，若 CSV 文件中某字段的值为空，那么读取后的值是 “”，而非 null，标记 NullValues 特性后，若 CSV 文件中的某字段值为 NullValues 指定的值，则读取后为 null。</p><p>若同时标记了 Default 特性，则此特性不起作用。</p><blockquote><p>坑爹的是，在写入文件时，此特性并不起作用。因此会引起读写不一致的问题。</p></blockquote><h2 id="Constant"><a href="#Constant" class="headerlink" title="Constant"></a>Constant</h2><p>Constant 特性为字段指定一个常量值，读写时都使用此值，无论指定了什么其他映射或配置。</p><h2 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h2><p>Format 指定类型转换时使用的字符串格式。\n</p><p>例如数字和时间类型，我们经常会指定其格式。\n</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [Format("0.00")]    public decimal Amount { get; set; }    [Format("yyyy-MM-dd HH:mm:ss")]    public DateTime JoinTime { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="BooleanTrueValues-和-BooleanFalseValues"><a href="#BooleanTrueValues-和-BooleanFalseValues" class="headerlink" title="BooleanTrueValues 和 BooleanFalseValues"></a>BooleanTrueValues 和 BooleanFalseValues</h2><p>这两个特性用于将 bool 转换成指定的形式显示。</p><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [BooleanTrueValues("yes")]    [BooleanFalseValues("no")]    public bool Vip { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="NumberStyles"><a href="#NumberStyles" class="headerlink" title="NumberStyles"></a>NumberStyles</h2><pre class="line-numbers language-none"><code class="language-none">public class Foo{    ...    [Format("X2")]    [NumberStyles(NumberStyles.HexNumber)]    public int Data { get; set; }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>比较有用是 NumberStyles.HexNumber 和 NumberStyles.AllowHexSpecifier，这两个枚举的作用差不多。此特性仅在读取时有效，写入时并不会转成 16 进制写入。这会导致读写不一致，可以用 Format 特性指定写入格式。</p><h1 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h1><p>如果无法给要映射的类添加特性，在这种情况下，可以使用 ClassMap 方式进行映射。\n</p><p>使用映射和使用特性效果是一样的，坑爹的地方也一样坑爹。以下示例用属性实现了上面特性的功能。\n</p><pre class="line-numbers language-none"><code class="language-none">public class Foo2{    public int ID { get; set; }    public string Name { get; set; }    public decimal Amount { get; set; }    public DateTime JoinTime { get; set; }    public string Msg { get; set; }    public string Msg2 { get; set; }    public bool Vip { get; set; }    public string Remarks { get; set; }    public string None { get; set; }    public int Data { get; set; }}public class Foo2Map : ClassMap&lt;Foo2&gt;{    public Foo2Map()    {        Map(m =&gt; m.ID).Index(0).Name("id");        Map(m =&gt; m.Name).Index(1).Name("name");        Map(m =&gt; m.Amount).TypeConverterOption.Format("0.00");        Map(m =&gt; m.JoinTime).TypeConverterOption.Format("yyyy-MM-dd HH:mm:ss");        Map(m =&gt; m.Msg).Default("Hello");        Map(m =&gt; m.Msg2).Ignore();        Map(m =&gt; m.Vip)            .TypeConverterOption.BooleanValues(true, true, new string[] { "yes" })            .TypeConverterOption.BooleanValues(false, true, new string[] { "no" });        Map(m =&gt; m.Remarks).Optional();        Map(m =&gt; m.None).TypeConverterOption.NullValues("None", "none", "Null", "null");        Map(m =&gt; m.Data)            .TypeConverterOption.NumberStyles(NumberStyles.HexNumber)            .TypeConverterOption.Format("X2");    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在使用映射前，需要先注册</p><pre class="line-numbers language-none"><code class="language-none">csv.Configuration.RegisterClassMap&lt;Foo2Map&gt;();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="ConvertUsing"><a href="#ConvertUsing" class="headerlink" title="ConvertUsing"></a>ConvertUsing</h2><p>ConvertUsing 允许使用一个委托方法实现类型转换。</p><pre class="line-numbers language-none"><code class="language-none">// 常数Map(m =&gt; m.Constant).ConvertUsing(row =&gt; 3);// 把两列聚合在一起Map(m =&gt; m.Name).ConvertUsing(row =&gt; $"{row.GetField&lt;string&gt;("FirstName")} {row.GetField&lt;string&gt;("LastName")}");Map(m =&gt; m.Names).ConvertUsing(row =&gt; new List&lt;string&gt; { row.GetField&lt;string&gt;("Name") } );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="Delimiter"><a href="#Delimiter" class="headerlink" title="Delimiter"></a>Delimiter</h2><p>分隔符</p><pre class="line-numbers language-none"><code class="language-none">Delimiter = ",";<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="HasHeaderRecord"><a href="#HasHeaderRecord" class="headerlink" title="HasHeaderRecord"></a>HasHeaderRecord</h2><p>此配置前文已经提到过，是否将第一行作为标题</p><pre class="line-numbers language-none"><code class="language-none">HasHeaderRecord = false;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="IgnoreBlankLines"><a href="#IgnoreBlankLines" class="headerlink" title="IgnoreBlankLines"></a>IgnoreBlankLines</h2><p>是否忽略空行，默认 true<br><code>csv.Configuration.IgnoreBlankLines = false; </code></p><h2 id="AllowComments"><a href="#AllowComments" class="headerlink" title="AllowComments"></a>AllowComments</h2><p>是否允许注释，注释以 # 开头。<br><code>csv.Configuration.AllowComments = true; </code></p><h2 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h2><p>获取或设置用于表示注释掉的行的字符。默认是 #。<br><code>csv.Configuration.Comment = '/'; </code></p><h2 id="BadDataFound"><a href="#BadDataFound" class="headerlink" title="BadDataFound"></a>BadDataFound</h2><p>设置一个函数，该函数会在数据不正确时触发，可用于记录日志。</p><h2 id="IgnoreQuotes"><a href="#IgnoreQuotes" class="headerlink" title="IgnoreQuotes"></a>IgnoreQuotes</h2><p>获取或设置一个值，该值指示在解析时是否应忽略引号并将其与其他任何字符一样对待。\n</p><p>默认是 false，如果字符串中有引号，必须是 3 个 “ 连在一起，读取到的字符串中才会有一个 “，如果是 1 个则忽略，2 个则报错。\n</p><p>如果为 true，则会将 “ 当做字符串原样返回。\n</p><p><code>csv.Configuration.IgnoreQuotes = true;</code></p><p>CsvWriter 中是没有这个属性的，一旦字符串中包含 “，写出来就是 3 个 “ 连在一起。\n</p><h2 id="TrimOptions"><a href="#TrimOptions" class="headerlink" title="TrimOptions"></a>TrimOptions</h2><p>去除字段首尾空格<br><code>csv.Configuration.TrimOptions = TrimOptions.Trim;</code></p><h2 id="PrepareHeaderForMatch"><a href="#PrepareHeaderForMatch" class="headerlink" title="PrepareHeaderForMatch"></a>PrepareHeaderForMatch</h2><p>PrepareHeaderForMatch 定义了属性名称与标题进行匹配的函数。标题和属性名称均通过该函数运行。此功能可用于删除标题中的空格，或者当标题和属性名称大小写不一致时统一大小写后比较。\n</p><pre class="line-numbers language-none"><code class="language-none">csv.Configuration.PrepareHeaderForMatch = (string header, int index) =&gt; header.ToLower();<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hepler </category>
+          
+          <category> 工作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Hepler </tag>
+            
+            <tag> Csv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C#-Attribute-学习日志（5）</title>
+      <link href="/2022/11/23/c-attribute-xue-xi-ri-zhi-5/"/>
+      <url>/2022/11/23/c-attribute-xue-xi-ri-zhi-5/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Attribute概述"><a href="#Attribute概述" class="headerlink" title="Attribute概述"></a>Attribute概述</h1><p>特性本质上是用来给代码添加额外信息的一种手段，它可以应用于类、结构、方法、构造函数等。在 C# 中，特性是继承自 Attribute 基类的类。所有继承自 Attribute 的类都可以用作给代码添加额外信息。</p><h1 id="预定义特性"><a href="#预定义特性" class="headerlink" title="预定义特性"></a>预定义特性</h1><p>一共有三种预定义的特性</p><ul><li>AttributeUsage</li><li>Conditional</li><li>Obsolete</li></ul><h2 id="AttributeUsage"><a href="#AttributeUsage" class="headerlink" title="AttributeUsage"></a>AttributeUsage</h2><p>描述了如何使用一个自定义特性类。\n<br>规定了特性可以应用到的项目的类型\n</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>语法如下</p><pre class="line-numbers language-none"><code class="language-none">[AttributeUsage(   validon,   AllowMultiple=allowmultiple,   Inherited=inherited)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>其中\n</p><ul><li>参数 validon 规定特性可被放置的语言元素。它是枚举器 AttributeTargets 的值的组合。默认值是 AttributeTargets.All。</li><li>参数 allowmultiple（可选的）为该特性的 AllowMultiple 属性（property）提供一个布尔值。如果为 true，则该特性是多用的。默认值是 false（单用的）。</li><li>参数 inherited（可选的）为该特性的 Inherited 属性（property）提供一个布尔值。如果为 true，则该特性可被派生类继承。默认值是 false（不被继承）。</li></ul><h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><pre class="line-numbers language-none"><code class="language-none">[AttributeUsage(AttributeTargets.Class |AttributeTargets.Constructor |AttributeTargets.Field |AttributeTargets.Method |AttributeTargets.Property, AllowMultiple = true)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Conditional"><a href="#Conditional" class="headerlink" title="Conditional"></a>Conditional</h2><p>这个预定义特性标记了一个条件方法，其执行依赖于指定的预处理标识符。\n</p><p>它会引起方法调用的条件编译，取决于指定的值，比如 Debug 或 Trace。例如，当调试代码时显示变量的值。\n</p><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>规定该特性的语法如下：\n</p><pre class="line-numbers language-none"><code class="language-none">[Conditional(   conditionalSymbol)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="使用示例-1"><a href="#使用示例-1" class="headerlink" title="使用示例"></a>使用示例</h3><pre class="line-numbers language-none"><code class="language-none">#define DEBUGusing System;using System.Diagnostics;public class Myclass{    [Conditional("DEBUG")]    public static void Message(string msg)    {        Console.WriteLine(msg);    }}class Test{    static void function1()    {        Myclass.Message("In Function 1.");        function2();    }    static void function2()    {        Myclass.Message("In Function 2.");    }    public static void Main()    {        Myclass.Message("In Main function.");        function1();        Console.ReadKey();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当上面的代码被编译与执行，会有如下效果：</p><pre class="line-numbers language-none"><code class="language-none">In Main functionIn Function 1In Function 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="Obsolete"><a href="#Obsolete" class="headerlink" title="Obsolete"></a>Obsolete</h2><p>这个预定义特性标记了不应被使用的程序实体。它可以让您通知编译器丢弃某个特定的目标元素。例如，当一个新方法被用在一个类中，但是您仍然想要保持类中的旧方法，您可以通过显示一个应该使用新方法，而不是旧方法的消息，来把它标记为 obsolete（过时的）。</p><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>规定该特性的语法如下：</p><pre class="line-numbers language-none"><code class="language-none">[Obsolete(   message)][Obsolete(   message,   iserror)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>其中：\n</p><ul><li>参数 message，是一个字符串，描述项目为什么过时以及该替代使用什么。</li><li>参数 iserror，是一个布尔值。如果该值为true，编译器应把该项目的使用当作一个错误。默认值是false（编译器生成一个警告）。</li></ul><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre class="line-numbers language-none"><code class="language-none">using System;public class MyClass{   [Obsolete("Don't use OldMethod, use NewMethod instead", true)]   static void OldMethod()   {       Console.WriteLine("It is the old method");   }   static void NewMethod()   {       Console.WriteLine("It is the new method");    }   public static void Main()   {      OldMethod();   }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>当您尝试编译该程序时，编译器会给出一个错误消息说明：\n</p><pre class="line-numbers language-none"><code class="language-none">Don't use OldMethod, use NewMethod instead<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="创建自定义特性（Attribute）"><a href="#创建自定义特性（Attribute）" class="headerlink" title="创建自定义特性（Attribute）"></a>创建自定义特性（Attribute）</h1><p>自定义特性只需要让一个类继承Attribute类并且名称后缀是Attribute结尾即可。\n</p><h2 id="创建特性并使用"><a href="#创建特性并使用" class="headerlink" title="创建特性并使用"></a>创建特性并使用</h2><pre class="line-numbers language-none"><code class="language-none">class MsgAttribute : Attribute{    private string msg;    public MyAttribute(string msg)    {        this.msg = msg;    }    public void ShowMsg()    {        Console.WriteLine(msg);    }} [Msg("这是一条信息")]class MyClass{}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="读取特性信息"><a href="#读取特性信息" class="headerlink" title="读取特性信息"></a>读取特性信息</h2><p>特性只做标识所用。不借助一些外在力量，特性其实什么用也没有。\n</p><p>若要使用特性，通常需要使用反射。例如，可以使用反射获取类的相关信息。\n</p><pre class="line-numbers language-none"><code class="language-none">TypeInfo typeInfo = typeof(MyClass).GetTypeInfo();//获取类型信息MsgAttribute customAttribute = typeInfo.GetCustomAttribute&lt;MsgAttribute&gt;(); //获取特性信息，返回特性的实例对象customAttribute.GetName();//调用方法 控制台中输出 这是一条信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>GetCustomAttribute&lt;T&gt;\n<br>泛型方法用于获取某个特定的特性，返回该特性实例，还有一个GetCustomAttributes()方法用于获取所有的特性。</p><p>特性只有使用 GetCustomAttribute 或 GetCustomAttributes，它们才会实例化。 并且每次调用都会重新实例化并返回不同的特性实例。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>特性是给类等附加一些信息，方便读取。本身几乎没有实际的功能型效果。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常学习 </category>
+          
+          <category> 基本语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Attribute </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#-PadLeft（）,PadRight（）用法</title>
       <link href="/2022/10/27/c-padleft-padright-yong-fa/"/>
       <url>/2022/10/27/c-padleft-padright-yong-fa/</url>

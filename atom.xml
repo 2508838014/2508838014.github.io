@@ -6,7 +6,7 @@
   <link href="https://2508838014.github.io/atom.xml" rel="self"/>
   
   <link href="https://2508838014.github.io/"/>
-  <updated>2022-10-27T13:47:38.504Z</updated>
+  <updated>2022-11-23T12:54:59.701Z</updated>
   <id>https://2508838014.github.io/</id>
   
   <author>
@@ -15,6 +15,193 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C-TCP_Client-学习日志（7）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-tcp-client-xue-xi-ri-zhi-7/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-tcp-client-xue-xi-ri-zhi-7/</id>
+    <published>2022-11-23T12:51:09.000Z</published>
+    <updated>2022-11-23T12:54:59.701Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TCP连接&quot;&gt;&lt;a href=&quot;#TCP连接&quot; class=&quot;headerlink&quot; title=&quot;TCP连接&quot;&gt;&lt;/a&gt;TCP连接&lt;/h1&gt;&lt;p&gt;tcpClent&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="Helper" scheme="https://2508838014.github.io/categories/Helper/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Helper/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+    <category term="TCP" scheme="https://2508838014.github.io/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-TCP_server-学习日志（7）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-tcp-server-xue-xi-ri-zhi-7/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-tcp-server-xue-xi-ri-zhi-7/</id>
+    <published>2022-11-23T12:50:56.000Z</published>
+    <updated>2022-11-23T12:55:42.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TCPServer&quot;&gt;&lt;a href=&quot;#TCPServer&quot; class=&quot;headerlink&quot; title=&quot;TCPServer&quot;&gt;&lt;/a&gt;TCPServer&lt;/h1&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="Helper" scheme="https://2508838014.github.io/categories/Helper/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Helper/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+    <category term="TCP" scheme="https://2508838014.github.io/tags/TCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-RPC_Server-学习日志（6）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-rpc-server-xue-xi-ri-zhi-6/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-rpc-server-xue-xi-ri-zhi-6/</id>
+    <published>2022-11-23T12:49:39.000Z</published>
+    <updated>2022-11-23T12:54:07.233Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C-RPC通用版本&quot;&gt;&lt;a href=&quot;#C-RPC通用版本&quot; class=&quot;headerlink&quot; title=&quot;C#-RPC通用版本&quot;&gt;&lt;/a&gt;C#-RPC通用版本&lt;/h1&gt;&lt;p&gt;双方约定好的程序有哪些&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="Helper" scheme="https://2508838014.github.io/categories/Helper/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Helper/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+    <category term="RPC" scheme="https://2508838014.github.io/tags/RPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-RPC_Client-学习日志（6）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/</id>
+    <published>2022-11-23T12:49:27.000Z</published>
+    <updated>2022-11-23T12:53:27.171Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C-RPC-Client&quot;&gt;&lt;a href=&quot;#C-RPC-Client&quot; class=&quot;headerlink&quot; title=&quot;C#-RPC-Client&quot;&gt;&lt;/a&gt;C#-RPC-Client&lt;/h1&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="Helper" scheme="https://2508838014.github.io/categories/Helper/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Helper/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+    <category term="RPC" scheme="https://2508838014.github.io/tags/RPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C-CsvHelper-学习日志（6）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-csvhelper-xue-xi-ri-zhi-6/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-csvhelper-xue-xi-ri-zhi-6/</id>
+    <published>2022-11-23T12:49:01.000Z</published>
+    <updated>2022-11-23T12:56:48.042Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;CsvHelper 是一个用于读写 CSV 文件的.NET库。极其快速，灵活且易于使用。\n&lt;/p&gt;
+&lt;p&gt;CsvHelper</summary>
+        
+      
+    
+    
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/categories/Hepler/"/>
+    
+    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Hepler/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Hepler" scheme="https://2508838014.github.io/tags/Hepler/"/>
+    
+    <category term="Csv" scheme="https://2508838014.github.io/tags/Csv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#-Attribute-学习日志（5）</title>
+    <link href="https://2508838014.github.io/2022/11/23/c-attribute-xue-xi-ri-zhi-5/"/>
+    <id>https://2508838014.github.io/2022/11/23/c-attribute-xue-xi-ri-zhi-5/</id>
+    <published>2022-11-23T12:47:50.000Z</published>
+    <updated>2022-11-23T12:57:45.180Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Attribute概述&quot;&gt;&lt;a href=&quot;#Attribute概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="基本语法" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+    
+    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
+    
+    <category term="Attribute" scheme="https://2508838014.github.io/tags/Attribute/"/>
+    
+  </entry>
   
   <entry>
     <title>C#-PadLeft（）,PadRight（）用法</title>
@@ -439,198 +626,6 @@
     <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
     
     <category term="Visual Studio" scheme="https://2508838014.github.io/tags/Visual-Studio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>定期清理文件与文件夹</title>
-    <link href="https://2508838014.github.io/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/"/>
-    <id>https://2508838014.github.io/2022/10/26/ding-qi-qing-li-wen-jian-yu-wen-jian-jia/</id>
-    <published>2022-10-26T13:13:01.000Z</published>
-    <updated>2022-10-26T13:14:20.801Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;定期清理某种类型文件&quot;&gt;&lt;a href=&quot;#定期清理某种类型文件&quot; class=&quot;headerlink&quot; title=&quot;定期清理某种类型文件&quot;&gt;&lt;/a&gt;定期清理某种类型文件&lt;/h1&gt;&lt;p&gt;有的时候需要定期清理图片等。\n&lt;/p&gt;
-&lt;pre</summary>
-        
-      
-    
-    
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="文件夹" scheme="https://2508838014.github.io/tags/%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
-    
-    <category term="定期清理" scheme="https://2508838014.github.io/tags/%E5%AE%9A%E6%9C%9F%E6%B8%85%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C-连接SQLServer</title>
-    <link href="https://2508838014.github.io/2022/10/23/c-lian-jie-sqlserver/"/>
-    <id>https://2508838014.github.io/2022/10/23/c-lian-jie-sqlserver/</id>
-    <published>2022-10-23T01:57:07.000Z</published>
-    <updated>2022-10-26T13:18:34.761Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;数据库的连接&quot;&gt;&lt;a href=&quot;#数据库的连接&quot; class=&quot;headerlink&quot; title=&quot;数据库的连接&quot;&gt;&lt;/a&gt;数据库的连接&lt;/h1&gt;&lt;p&gt;万一有的时候需要我去连接SQL</summary>
-        
-      
-    
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="数据库" scheme="https://2508838014.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    <category term="SQL Server" scheme="https://2508838014.github.io/tags/SQL-Server/"/>
-    
-    <category term="连接" scheme="https://2508838014.github.io/tags/%E8%BF%9E%E6%8E%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Form操作-TextBox仅数字等输入，离开检测</title>
-    <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/"/>
-    <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-textbox-jin-shu-zi-deng-shu-ru-chi-kai-jian-ce/</id>
-    <published>2022-10-09T13:11:11.000Z</published>
-    <updated>2022-10-18T13:46:12.989Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;仅支持数字等输入&quot;&gt;&lt;a href=&quot;#仅支持数字等输入&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="TextBox" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/TextBox/"/>
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="日常学习" scheme="https://2508838014.github.io/tags/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="TextBox" scheme="https://2508838014.github.io/tags/TextBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XML-RPC</title>
-    <link href="https://2508838014.github.io/2022/10/09/xml-rpc/"/>
-    <id>https://2508838014.github.io/2022/10/09/xml-rpc/</id>
-    <published>2022-10-09T13:10:10.000Z</published>
-    <updated>2022-10-09T13:56:39.457Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/categories/C/"/>
-    
-    <category term="XML-RPC" scheme="https://2508838014.github.io/categories/C/XML-RPC/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/C/XML-RPC/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="C#" scheme="https://2508838014.github.io/tags/C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="XML-RPC" scheme="https://2508838014.github.io/tags/XML-RPC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Form操作-MessageBox</title>
-    <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-messagebox/"/>
-    <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-messagebox/</id>
-    <published>2022-10-09T13:09:37.000Z</published>
-    <updated>2022-10-09T13:43:33.977Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考文章&lt;br&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="MessageBox" scheme="https://2508838014.github.io/tags/MessageBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Form操作-二次确认弹窗</title>
-    <link href="https://2508838014.github.io/2022/10/09/form-cao-zuo-er-ci-que-ren-dan-chuang/"/>
-    <id>https://2508838014.github.io/2022/10/09/form-cao-zuo-er-ci-que-ren-dan-chuang/</id>
-    <published>2022-10-09T13:09:07.000Z</published>
-    <updated>2022-10-09T13:57:33.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在一些比较关键的功能上可以让进行二次确认，避免因为误操作而导致的损失。&lt;br&gt;示例代码是用于二次确认用户的界面关闭，可以在此基础上进行修改。 &lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/categories/Form%E6%93%8D%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="工作技巧" scheme="https://2508838014.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
-    
-    <category term="Form操作" scheme="https://2508838014.github.io/tags/Form%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="二次确认" scheme="https://2508838014.github.io/tags/%E4%BA%8C%E6%AC%A1%E7%A1%AE%E8%AE%A4/"/>
     
   </entry>
   
