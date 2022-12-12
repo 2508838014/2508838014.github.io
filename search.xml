@@ -101,7 +101,7 @@
       <link href="/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/"/>
       <url>/2022/11/23/c-rpc-client-xue-xi-ri-zhi-6/</url>
       
-        <content type="html"><![CDATA[<h1 id="C-RPC-Client"><a href="#C-RPC-Client" class="headerlink" title="C#-RPC-Client"></a>C#-RPC-Client</h1><pre class="line-numbers language-none"><code class="language-none">[XmlRpcUrl("http://localhost:7762/XmlService.rem")]public interface IXmlServer : IXmlRpcProxy{    [XmlRpcMethod("XmlService.Add")]    int Add(int a, int b);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">static void Main(string[] args){    try    {        IXmlServer proxy = XmlRpcProxyGen.Create&lt;IXmlServer&gt;();        Console.WriteLine("Synchronous call：");        Console.WriteLine("state #45 is {0}", proxy.Add(12,34));    }    catch (XmlRpcFaultException fex)    {        Console.WriteLine(fex.FaultString);    }    catch (Exception ex)    {        Console.WriteLine(ex.Message);    }    Console.WriteLine("到此结束");    Console.ReadLine();}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="C-RPC-Client"><a href="#C-RPC-Client" class="headerlink" title="C#-RPC-Client"></a>C#-RPC-Client</h1><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">[XmlRpcUrl("http://localhost:7762/XmlService.rem")]public interface IXmlServer : IXmlRpcProxy{    [XmlRpcMethod("XmlService.Add")]    int Add(int a, int b);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">static void Main(string[] args){    try    {        IXmlServer proxy = XmlRpcProxyGen.Create&lt;IXmlServer&gt;();        Console.WriteLine("Synchronous call：");        Console.WriteLine("state #45 is {0}", proxy.Add(12,34));    }    catch (XmlRpcFaultException fex)    {        Console.WriteLine(fex.FaultString);    }    catch (Exception ex)    {        Console.WriteLine(ex.Message);    }    Console.WriteLine("到此结束");    Console.ReadLine();}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -148,9 +148,9 @@
             
             <tag> C# </tag>
             
-            <tag> Hepler </tag>
-            
             <tag> Csv </tag>
+            
+            <tag> Hepler </tag>
             
         </tags>
       
@@ -359,9 +359,9 @@
             
             <tag> C# </tag>
             
-            <tag> config </tag>
-            
             <tag> Hepler </tag>
+            
+            <tag> config </tag>
             
         </tags>
       
